@@ -3,7 +3,7 @@ var app = app || {};
 
 app.textUnitView = Backbone.View.extend({
 
-    tagName: "div",
+    tagName: "li",
     className: "textUnit",
 
     template: _.template($("#textUnitView").html()),                    // represented as template in index.html
