@@ -16,5 +16,4 @@ app.textUnitView = Backbone.View.extend({
         return this;
     }
 
-
 });

@@ -9,12 +9,17 @@
 
     <!-- main feed -->
     <div id="mainFeed">
+        <ul id="mainFeedTexts">
+        </ul>
         <input id="mainFeedInput" type="text" placeholder="Type here...">
     </div>
 
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
+        <div class="textUnit">
+            <%= body %>
+        </div>
     </script>
 
 	<!-- dependencies -->
