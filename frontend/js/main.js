@@ -14,3 +14,5 @@ var testText_2 = new app.textUnit({
 var mainFeedTexts = new app.textUnitCollection([
     testText_1, testText_2
 ]);
+
+var main = new app.mainFeedView();
