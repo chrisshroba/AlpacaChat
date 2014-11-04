@@ -9,15 +9,26 @@ app.mainFeedView = Backbone.View.extend({
         "keypress #mainFeedInput": "createOnEnter"
     },
 
-    initialize: function() {
-
+    initialize: function(texts) {
         this.input = this.$("#mainFeedInput");
+        if (!texts) this.data = new app.textUnitCollection([]);
+        else        this.data = texts;
     },
 
     createOnEnter: function(e) {
         if(e.keyCode != 13) return;
+        if(!this.input.val()) return;
 
-        console.log("pressed enter!");
+        // create new text unit and add to collection
+        this.data.add({
+            body: this.input.val(),
+            owner: "created",
+            img: "none"
+        });
+
+        console.log(this.data.toJSON());
+
+        this.input.val('');
     }
 
 });

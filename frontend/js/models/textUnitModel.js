@@ -1,7 +1,7 @@
 //Namespace
 var app = app || {};
 
-app.textUnit = Backbone.View.extend({
+app.textUnit = Backbone.Model.extend({
 
     defaults: {
         body: "no message",

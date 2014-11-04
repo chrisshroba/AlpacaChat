@@ -1,5 +1,4 @@
-// Namespace app
-var app = app || {};
+
 
 var testText_1 = new app.textUnit({
     body: "test text 1!",
@@ -15,4 +14,7 @@ var mainFeedTexts = new app.textUnitCollection([
     testText_1, testText_2
 ]);
 
-var main = new app.mainFeedView();
+var main = new app.mainFeedView(mainFeedTexts);
+// main.data = mainFeedTexts;
+
+console.log(mainFeedTexts.toJSON());
