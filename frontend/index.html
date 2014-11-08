@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="css/globalStyles.css">
 </head>
 
+
     <!-- main feed -->
     <div id="mainFeed">
         <ul id="mainFeedTexts">
         </ul>
-        <input id="mainFeedInput" type="text" placeholder="Type here...">
+        <input id="mainFeedInput" type="text" placeholder="COME ON AND SLAM">
     </div>
 
+    <div id="convoFeed">
+        <input id="convoSearch" type="text" placeholder="Search...">
+        <ul id="convos">
+        </ul>
+    </div>
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
@@ -21,6 +27,19 @@
             <%= body %>
         </div>
     </script>
+    <script type="collectionView" type="text/template">
+        <div class="collection">
+            <%= body %>
+    </script>
+
+    <!-- collection view -->
+    <div id="collectionView">
+        <ul id="collectionViewCollections">
+        </ul>
+        <input id="createNewCollection" type="text" placeholder="New Collection...">
+        <!-- <button type="button" onclick= "">Create New Collection</button> -->
+    </div>
+
 
 	<!-- dependencies -->
     <script src="js/libs/jquery.js"></script>
@@ -32,6 +51,11 @@
     <script src="js/views/textUnitView.js"></script>
     <script src="js/collections/textUnitCollection.js"></script>
     <script src="js/views/mainFeedView.js"></script>
+    <script src="js/views/collectionView.js"></script>
+    <script src="js/models/collectionModel.js"></script>
+    <script src="js/collections/collectionCollection.js"></script>
+    <script src="js/views/collectionViewView.js"></script>
+
     <script src="js/main.js"></script>
 
 </html>
