@@ -15,16 +15,26 @@
         <input id="mainFeedInput" type="text" placeholder="COME ON AND SLAM">
     </div>
 
+    <!-- convo feed -->
     <div id="convoFeed">
-        <input id="convoSearch" type="text" placeholder="Search...">
+        <input id="convoSearch" type="text" placeholder="Conversation Search...">
         <ul id="convos">
         </ul>
     </div>
+
+
+
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
         <div class="textUnit">
             <%= body %>
+        </div>
+    </script>
+
+    <script id="convoUnitView" type="text/template">
+        <div class="convoUnit">
+            <%= title %>
         </div>
     </script>
 
@@ -38,6 +48,10 @@
     <script src="js/views/textUnitView.js"></script>
     <script src="js/collections/textUnitCollection.js"></script>
     <script src="js/views/mainFeedView.js"></script>
+    <script src="js/views/convoFeedView.js"></script>
+    <script src="js/views/convoUnitView.js"></script>
+    <script src="js/models/convoUnitModel.js"></script>
+    <script src="js/collections/convoUnitCollection.js"></script>
     <script src="js/main.js"></script>
 
 </html>
