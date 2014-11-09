@@ -1,5 +1,5 @@
 // Namespace
-var app = app || {}
+var app = app || {};
 
 app.convoFeedView = Backbone.View.extend({
 
