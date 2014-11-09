@@ -12,12 +12,16 @@
     <div id="mainFeed">
         <ul id="mainFeedTexts">
         </ul>
-        <input id="mainFeedInput" type="text" placeholder="COME ON AND SLAM">
+        <input id="mainFeedInput" type="text" placeholder="Write a reply...">
     </div>
 
     <!-- convo feed -->
     <div id="convoFeed">
+<<<<<<< HEAD
         <input id="convoSearch" type="text" placeholder="Conversation Search...">
+=======
+        <input id="convoSearch" type="text" placeholder="Search in this conversation">
+>>>>>>> master
         <ul id="convos">
         </ul>
     </div>
@@ -31,6 +35,19 @@
             <%= body %>
         </div>
     </script>
+    <script type="collectionView" type="text/template">
+        <div class="collection">
+            <%= body %>
+    </script>
+
+    <!-- collection view -->
+    <div id="collectionView">
+        <ul id="collectionViewCollections">
+        </ul>
+        <input id="createNewCollection" type="text" placeholder="New Collection...">
+        <!-- <button type="button" onclick= "">Create New Collection</button> -->
+    </div>
+
 
     <script id="convoUnitView" type="text/template">
         <div class="convoUnit">
@@ -52,6 +69,10 @@
     <script src="js/views/convoUnitView.js"></script>
     <script src="js/models/convoUnitModel.js"></script>
     <script src="js/collections/convoUnitCollection.js"></script>
+    <script src="js/views/collectionView.js"></script>
+    <script src="js/models/collectionModel.js"></script>
+    <script src="js/collections/collectionCollection.js"></script>
+    <script src="js/views/collectionViewView.js"></script>
     <script src="js/main.js"></script>
 
 </html>
