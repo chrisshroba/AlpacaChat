@@ -19,5 +19,3 @@ var conversations = new app.convoUnitCollection([
 ]);
 
 var convos = new app.convoFeedView(conversations);
-
-console.log(conversations.toJSON());

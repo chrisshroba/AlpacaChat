@@ -27,9 +27,7 @@ app.mainFeedView = Backbone.View.extend({
         });
 
         this.addMessage(new_model);
-
-        console.log(this.data.toJSON());
-
+        
     },
 
     addMessage: function(text_model) {
