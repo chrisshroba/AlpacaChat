@@ -24,17 +24,18 @@ app.mainFeedView = Backbone.View.extend({
             body: this.input.val(),
             owner: "created",
             img: "none"
-        })
+        });
 
-        this.data.add(new_model);
+        this.addMessage(new_model);
 
         console.log(this.data.toJSON());
 
-        var view = new app.textUnitView({
-            model: new_model
-        })
-        this.$("#mainFeedTexts").append(view.render().el);
+    },
 
+    addMessage: function(text_model) {
+        this.data.add(text_model);
+        var textView = new app.textUnitView({model: text_model});
+        this.$("#mainFeedTexts").append(textView.render().el);
         this.input.val('');
     }
 

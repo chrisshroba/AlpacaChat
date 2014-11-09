@@ -17,10 +17,8 @@ app.convoFeedView = Backbone.View.extend({
         this.renderAll();
     },
 
-    // render all elements currently in model
     renderAll: function() {
-        console.log("renderAll called");
-        
+        this.data.each(this.addConvo, this);
     },
 
     searchConvos: function(e) {
@@ -32,7 +30,9 @@ app.convoFeedView = Backbone.View.extend({
     },
 
     addConvo: function(convo) {
-
+        this.data.add(convo);
+        var newConvo = new app.convoUnitView({model: convo});
+        this.$("#convos").append(newConvo.render().el);
     },
 
     clearConvos: function(){
