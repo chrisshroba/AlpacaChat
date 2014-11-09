@@ -1,3 +1,7 @@
 html {
   background-color: #EFF1F5;
 }
+
+input {
+	width: 15em;
+}
