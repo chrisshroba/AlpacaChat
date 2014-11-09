@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/globalStyles.css">
 </head>
 
+
     <!-- main feed -->
     <div id="mainFeed">
         <ul id="mainFeedTexts">
@@ -14,11 +15,15 @@
         <input id="mainFeedInput" type="text" placeholder="Write a reply...">
     </div>
 
+    <!-- convo feed -->
     <div id="convoFeed">
         <input id="convoSearch" type="text" placeholder="Search in this conversation">
         <ul id="convos">
         </ul>
     </div>
+
+
+
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
@@ -40,6 +45,12 @@
     </div>
 
 
+    <script id="convoUnitView" type="text/template">
+        <div class="convoUnit">
+            <%= title %>
+        </div>
+    </script>
+
 	<!-- dependencies -->
     <script src="js/libs/jquery.js"></script>
     <script src="js/libs/underscore.js"></script>
@@ -50,11 +61,14 @@
     <script src="js/views/textUnitView.js"></script>
     <script src="js/collections/textUnitCollection.js"></script>
     <script src="js/views/mainFeedView.js"></script>
+    <script src="js/views/convoFeedView.js"></script>
+    <script src="js/views/convoUnitView.js"></script>
+    <script src="js/models/convoUnitModel.js"></script>
+    <script src="js/collections/convoUnitCollection.js"></script>
     <script src="js/views/collectionView.js"></script>
     <script src="js/models/collectionModel.js"></script>
     <script src="js/collections/collectionCollection.js"></script>
     <script src="js/views/collectionViewView.js"></script>
-
     <script src="js/main.js"></script>
 
 </html>
