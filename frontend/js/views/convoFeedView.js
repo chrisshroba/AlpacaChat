@@ -1,5 +1,5 @@
 // Namespace
-var app = app || {}
+var app = app || {};
 
 app.convoFeedView = Backbone.View.extend({
 
@@ -41,9 +41,7 @@ app.convoFeedView = Backbone.View.extend({
                 narrowedCollection.add(convo);
             }
         }, this);
-
-        console.log(narrowedCollection.toJSON());
-
+        
         return narrowedCollection;
     },
 

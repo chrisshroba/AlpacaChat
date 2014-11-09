@@ -21,7 +21,7 @@ app.collectionViewView = Backbone.View.extend({
 
         // create new text unit and add to collection
         var new_model = new app.collection({
-            name: this.input.val(),
+            name: this.input.val()
         })
 
         this.data.add(new_model);
