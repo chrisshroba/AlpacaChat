@@ -3,7 +3,7 @@ var datmain = datmain || {};
 var mainFeedTexts = new app.textUnitCollection([
 ]);
 
-datmain.mainFeed = new app.mainFeedView(mainFeedTexts);
+datmain.main = new app.mainFeedView(mainFeedTexts);
 
 var last_id = 0;
 
