@@ -33,11 +33,23 @@ var testConvo5 = new app.convoUnit({
     title: "Marie",
     id: generate_id()
 });
+var testConvo6 = new app.convoUnit({
+    title: "Niki",
+    id: generate_id()
+});
+var testConvo7 = new app.convoUnit({
+    title: "Brendan",
+    id: generate_id()
+});
+var testConvo8 = new app.convoUnit({
+    title: "Victoria",
+    id: generate_id()
+});
 
 // console.log(testConvo5.toJSON());
 
 main.conversations = new app.convoUnitCollection([
-    testConvo, testConvo2, testConvo3, testConvo4, testConvo5
+    testConvo, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
 var convos = new app.convoFeedView(main.conversations);
