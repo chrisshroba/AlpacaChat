@@ -1,9 +1,9 @@
-var datmain = datmain || {};
+var main = main || {};
 /* main feed test area */
 var mainFeedTexts = new app.textUnitCollection([
 ]);
 
-datmain.main = new app.mainFeedView(mainFeedTexts);
+main.mainFeed = new app.mainFeedView(mainFeedTexts);
 
 var last_id = 0;
 
@@ -36,11 +36,11 @@ var testConvo5 = new app.convoUnit({
 
 // console.log(testConvo5.toJSON());
 
-datmain.conversations = new app.convoUnitCollection([
+main.conversations = new app.convoUnitCollection([
     testConvo, testConvo2, testConvo3, testConvo4, testConvo5
 ]);
 
-var convos = new app.convoFeedView(datmain.conversations);
+var convos = new app.convoFeedView(main.conversations);
 
 var router = new app.router();
 

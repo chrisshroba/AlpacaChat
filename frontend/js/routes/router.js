@@ -10,11 +10,10 @@ app.router = Backbone.Router.extend({
 	},
 
 	message: function(id) {
-		console.log(id);
-		var convo = datmain.conversations.get(id);
-		datmain.main.data = convo.thread;
-		datmain.main.clearAll();
-		datmain.main.renderAll(datmain.main.data);
+		var convo = main.conversations.get(id);
+		main.mainFeed.data = convo.thread;
+		main.mainFeed.clearAll();
+		main.mainFeed.renderAll(main.mainFeed.data);
 	}
 
 });
