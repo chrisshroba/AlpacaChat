@@ -29,3 +29,6 @@ var conversations = new app.convoUnitCollection([
 ]);
 
 var convos = new app.convoFeedView(conversations);
+
+/* collections test area */
+
