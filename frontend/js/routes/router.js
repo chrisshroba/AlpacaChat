@@ -14,6 +14,7 @@ app.router = Backbone.Router.extend({
 		main.mainFeed.data = convo.thread;
 		main.mainFeed.clearAll();
 		main.mainFeed.renderAll(main.mainFeed.data);
+		main.mainFeed.scroll();
 	}
 
 });
