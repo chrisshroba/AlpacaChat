@@ -41,6 +41,14 @@ app.mainFeedView = Backbone.View.extend({
         var textView = new app.textUnitView({model: text_model});
         this.$("#mainFeedTexts").append(textView.render().el);
         this.input.val('');
+    },
+
+    renderAll: function(collection) {
+        collection.each(this.addMessage, this);
+    },
+
+    clearAll: function() {
+        this.$("#mainFeedTexts").html("");
     }
 
 });
