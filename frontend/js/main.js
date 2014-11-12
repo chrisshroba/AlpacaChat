@@ -14,23 +14,23 @@ function generate_id() {
 
 /* converations test area */
 var testConvo = new app.convoUnit({
-    title: "test title 1",
+    title: "Austin",
     id: generate_id()
 });
 var testConvo2 = new app.convoUnit({
-    title: "test title 2",
+    title: "Blade",
     id: generate_id()
 });
 var testConvo3 = new app.convoUnit({
-    title: "test title 3",
+    title: "Claire",
     id: generate_id()
 });
 var testConvo4 = new app.convoUnit({
-    title: "test title 14",
+    title: "Chris",
     id: generate_id()
 });
 var testConvo5 = new app.convoUnit({
-    title: "test title 25",
+    title: "Marie",
     id: generate_id()
 });
 

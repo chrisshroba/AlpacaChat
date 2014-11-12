@@ -4,6 +4,15 @@ html {
   color: #343D46;
 }
 
+a {
+	text-decoration: none;
+	color: #343D46;
+}
+
+a:hover {
+	color: #BD626B;
+}
+
 #convos {
 	position: relative;
 	top: 20px;
@@ -21,7 +30,7 @@ li {
 	position: relative;
 	top: 20px;
 	right: 17px;
-	
+
 	list-style-type: none;
 	line-height: 1.2;
 }
