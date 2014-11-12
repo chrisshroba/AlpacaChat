@@ -1,7 +1,7 @@
 
 var app = app || {};
 
-app.colFeedView = new Backbone.View.extend({
+app.colFeedView = Backbone.View.extend({
 
     el: $("#colFeed"),
 
