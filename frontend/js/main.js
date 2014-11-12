@@ -14,29 +14,41 @@ function generate_id() {
 
 /* converations test area */
 var testConvo = new app.convoUnit({
-    title: "test title 1",
+    title: "Austin",
     id: generate_id()
 });
 var testConvo2 = new app.convoUnit({
-    title: "test title 2",
+    title: "Blade",
     id: generate_id()
 });
 var testConvo3 = new app.convoUnit({
-    title: "test title 3",
+    title: "Claire",
     id: generate_id()
 });
 var testConvo4 = new app.convoUnit({
-    title: "test title 14",
+    title: "Chris",
     id: generate_id()
 });
 var testConvo5 = new app.convoUnit({
-    title: "test title 25",
+    title: "Marie",
+    id: generate_id()
+});
+var testConvo6 = new app.convoUnit({
+    title: "Niki",
+    id: generate_id()
+});
+var testConvo7 = new app.convoUnit({
+    title: "Brendan",
+    id: generate_id()
+});
+var testConvo8 = new app.convoUnit({
+    title: "Victoria",
     id: generate_id()
 });
 
 
 main.conversations = new app.convoUnitCollection([
-    testConvo, testConvo2, testConvo3, testConvo4, testConvo5
+    testConvo, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
 var convos = new app.convoFeedView(main.conversations);

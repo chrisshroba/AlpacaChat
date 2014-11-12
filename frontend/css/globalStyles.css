@@ -4,13 +4,31 @@ html {
   color: #343D46;
 }
 
+a {
+	text-decoration: none;
+	color: #4F5B66;
+}
+
+a:hover {
+	color: #BD626B;
+}
+
 #convos {
 	position: relative;
-	top: 20px;
 	right: 17px;
 
 	list-style-type: none;
 	line-height: 1.2;
+	color: #4F5B66;
+}
+
+#cols {
+	position: relative;
+	right: 17px;
+
+	list-style-type: none;
+	line-height: 1.2;
+	color: #65737D;
 }
 
 li {
@@ -21,7 +39,7 @@ li {
 	position: relative;
 	top: 20px;
 	right: 17px;
-	
+
 	list-style-type: none;
 	line-height: 1.2;
 }
@@ -74,6 +92,14 @@ li {
 	background-color: #C0C5CE;
 }
 
+#convosDiv {
+	position: absolute;
+	top: 1.5em;
+	height: calc(100% - 2em - 10px);
+
+	overflow: auto;
+}
+
 #convoSearch {
 	display:inline-block;
 	position: absolute;
@@ -94,6 +120,14 @@ li {
 	height: 100%;
 	width: 10em;
 	background-color: #DFE1E8;
+}
+
+#colsDiv {
+	position: absolute;
+	top: 1.5em;
+	height: calc(100% - 2em - 10px);
+
+	overflow: auto;
 }
 
 #createNewCollection {

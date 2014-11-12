@@ -15,6 +15,8 @@ app.router = Backbone.Router.extend({
 		main.mainFeed.data = convo.thread;
 		main.mainFeed.clearAll();
 		main.mainFeed.renderAll(main.mainFeed.data);
+		main.mainFeed.scroll();
+		main.mainFeed.focusTextarea();
 	},
 
 	savedMessage: function(body) {
@@ -31,7 +33,6 @@ app.router = Backbone.Router.extend({
 		//console.log("new deck added");
 
 		main.mainFeed.data;
-
 	}
 
 });
