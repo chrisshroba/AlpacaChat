@@ -36,11 +36,11 @@ var testConvo5 = new app.convoUnit({
 
 // console.log(testConvo5.toJSON());
 
-var conversations = new app.convoUnitCollection([
+datmain.conversations = new app.convoUnitCollection([
     testConvo, testConvo2, testConvo3, testConvo4, testConvo5
 ]);
 
-var convos = new app.convoFeedView(conversations);
+var convos = new app.convoFeedView(datmain.conversations);
 
 var router = new app.router();
 

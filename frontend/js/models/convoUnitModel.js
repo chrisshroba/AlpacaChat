@@ -9,5 +9,4 @@ app.convoUnit = Backbone.Model.extend({
         id: 0,
         thread: new app.textUnitCollection()
     }
-
 });

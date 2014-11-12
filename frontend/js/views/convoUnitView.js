@@ -21,6 +21,7 @@ app.convoUnitView = Backbone.View.extend({
     },
     testfunction: function(){
         // console.log("this.model.id");
+        // this.model.updateConvo();
     }
 
 });

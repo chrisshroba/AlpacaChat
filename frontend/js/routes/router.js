@@ -1,5 +1,5 @@
 var app = app || {};
-var datmain = datmain || {};
+// var datmain = datmain || {};
 
 app.router = Backbone.Router.extend({
 
@@ -11,7 +11,11 @@ app.router = Backbone.Router.extend({
 
 	message: function(id) {
 		console.log(id);
-		dat
+		var convo = datmain.conversations.get(id);
+		datmain.main.data = convo.thread;
+		datmain.main.renderAll(datmain.main.data);
+		console.log(datmain.main.data.toJSON());
+		console.log(convo.toJSON()); 
 	}
 
 });
