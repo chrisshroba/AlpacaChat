@@ -35,9 +35,13 @@
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
-        <div class="textUnit">
-            <%= body %>
-        </div>
+        <a href="#save/<%= body %>">
+            <div class="textUnit">
+                <%= body %>
+            </div>
+        </a>
+        <!--<select class="collections">-->
+        <!--</select>-->
     </script>
 
     <script id="deckTemplate" type="text/template">

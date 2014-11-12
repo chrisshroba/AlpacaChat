@@ -17,10 +17,6 @@ app.convoUnitView = Backbone.View.extend({
         var convoUnitTemplate = this.template(this.model.toJSON());
         this.$el.html(convoUnitTemplate);
         return this;
-    },
-    testfunction: function(){
-        // console.log("this.model.id");
-        // this.model.updateConvo();
     }
 
 });

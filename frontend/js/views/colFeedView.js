@@ -19,10 +19,7 @@ app.colFeedView = Backbone.View.extend({
     },
 
     createOnEnter: function(e){
-        console.log("test");
-        //if not enter
         if(e.keyCode != 13) return;
-        //if nothing in input, return early
         if(!this.input.val()) return;
 
         //create new deck
@@ -31,16 +28,16 @@ app.colFeedView = Backbone.View.extend({
             cards: null
         });
 
-        this.addDeck(new_deck);
+        main.route.deckAdded(new_deck);
+
+        //this.addDeck(new_deck);
+
     },
 
     addDeck: function(deck_model){
         this.data.add(deck_model);
         var newDeckView = new app.deckView({model: deck_model});
-        //adds a new list element to the list
         this.$("#cols").append(newDeckView.render().el);
-        console.log(this.data.toJSON());
-        //clear
         this.input.val("");
     }
 });

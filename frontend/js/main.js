@@ -34,7 +34,6 @@ var testConvo5 = new app.convoUnit({
     id: generate_id()
 });
 
-// console.log(testConvo5.toJSON());
 
 main.conversations = new app.convoUnitCollection([
     testConvo, testConvo2, testConvo3, testConvo4, testConvo5
@@ -42,8 +41,11 @@ main.conversations = new app.convoUnitCollection([
 
 var convos = new app.convoFeedView(main.conversations);
 
-var col = new app.colFeedView();
 
-var router = new app.router();
+/* collections */
+main.col = new app.colFeedView();
+
+/* router */
+main.route = new app.router();
 
 Backbone.history.start();
