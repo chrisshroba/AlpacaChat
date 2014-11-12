@@ -23,8 +23,8 @@
     </div>
 
     <!-- collection view -->
-    <div id="collectionView">
-        <ul id="collectionViewCollections">
+    <div id="colFeed">
+        <ul id="cols">
         </ul>
         <input id="createNewCollection" type="text" placeholder="New Collection...">
         <!-- <button type="button" onclick= "">Create New Collection</button> -->
@@ -37,8 +37,8 @@
             <%= body %>
         </div>
     </script>
-    <script type="collectionView" type="text/template">
-        <div class="collection">
+    <script id="colUnitView" type="text/template">
+        <div class="colUnit">
             <%= body %>
     </script>
     <script id="convoUnitView" type="text/template">
@@ -61,10 +61,9 @@
     <script src="js/views/convoUnitView.js"></script>
     <script src="js/models/convoUnitModel.js"></script>
     <script src="js/collections/convoUnitCollection.js"></script>
-    <script src="js/views/collectionView.js"></script>
-    <script src="js/models/collectionModel.js"></script>
-    <script src="js/collections/collectionCollection.js"></script>
-    <script src="js/views/collectionViewView.js"></script>
+    <script src="js/collections/colUnitCollection.js"></script>
+    <script src="js/models/colUnitModel.js"></script>
+    <script src="js/views/colUnitView.js"></script>
     <script src="js/main.js"></script>
 
 </html>
