@@ -42,6 +42,8 @@ main.conversations = new app.convoUnitCollection([
 
 var convos = new app.convoFeedView(main.conversations);
 
+var col = new app.colFeedView();
+
 var router = new app.router();
 
 Backbone.history.start();

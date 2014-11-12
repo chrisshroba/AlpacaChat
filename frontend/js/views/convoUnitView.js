@@ -1,6 +1,5 @@
 // Namespace
 var app = app || {};
-var datmain = datmain || {};
 
 app.convoUnitView = Backbone.View.extend({
 
