@@ -16,8 +16,9 @@ app.mainFeedView = Backbone.View.extend({
     },
 
     scroll: function() {
-            var objDiv = document.getElementById("mainFeedTextsDiv");
-            objDiv.scrollTop = objDiv.scrollHeight;
+        console.log("scroll called");
+        var objDiv = document.getElementById("mainFeedTextsDiv");
+        objDiv.scrollTop = objDiv.scrollHeight;
     },
 
     createOnEnter: function(e) {
@@ -33,7 +34,7 @@ app.mainFeedView = Backbone.View.extend({
         });
 
         this.addMessage(new_model);
-        scroll();
+        this.scroll();
     },
 
     addMessage: function(text_model) {
