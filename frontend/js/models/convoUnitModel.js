@@ -7,6 +7,11 @@ app.convoUnit = Backbone.Model.extend({
         title: "no title",
         img: "no image",
         id: 0,
-        thread: new app.textUnitCollection()
+        thread: null
+    },
+
+    initialize : function() {
+        console.log("initialize called in convo unit model");
+        this.thread = new app.textUnitCollection([]);
     }
 });

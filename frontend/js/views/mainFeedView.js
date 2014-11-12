@@ -39,6 +39,10 @@ app.mainFeedView = Backbone.View.extend({
 
     renderAll: function(collection) {
         collection.each(this.addMessage, this);
+    },
+
+    clearAll: function() {
+        this.$("#mainFeedTexts").html("");
     }
 
 });
