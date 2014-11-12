@@ -15,8 +15,14 @@ app.mainFeedView = Backbone.View.extend({
         else        this.data = texts;
     },
 
+    scroll: function() {
+            var objDiv = document.getElementById("mainFeedTextsDiv");
+            objDiv.scrollTop = objDiv.scrollHeight;
+    },
+
     createOnEnter: function(e) {
         if(e.keyCode != 13) return;
+        e.preventDefault();
         if(!this.input.val()) return;
 
         // create new text unit and add to collection
@@ -27,7 +33,7 @@ app.mainFeedView = Backbone.View.extend({
         });
 
         this.addMessage(new_model);
-        
+        scroll();
     },
 
     addMessage: function(text_model) {

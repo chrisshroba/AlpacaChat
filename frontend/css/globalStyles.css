@@ -4,7 +4,7 @@ html {
   color: #343D46;
 }
 
-ul {
+#convos {
 	position: relative;
 	top: 20px;
 	right: 17px;
@@ -15,6 +15,15 @@ ul {
 
 li {
 	padding-bottom: 10px;
+}
+
+#mainFeedTexts {
+	position: relative;
+	top: 20px;
+	right: 17px;
+	
+	list-style-type: none;
+	line-height: 1.2;
 }
 
 #mainFeed {
