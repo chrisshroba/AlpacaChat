@@ -19,6 +19,7 @@ app.colFeedView = new Backbone.View.extend({
     },
 
     createOnEnter: function(e){
+        console.log("blaskdfa");
         //if not enter
         if(e.keyCode != 13) return;
         //if nothing in input, return early
