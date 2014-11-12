@@ -1,13 +1,14 @@
 html {
   background-color: #EFF1F5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #343D46;
 }
 
 ul {
 	position: relative;
 	top: 20px;
-	right: 15px;
-	
+	right: 17px;
+
 	list-style-type: none;
 	line-height: 1.2;
 }
@@ -23,17 +24,14 @@ li {
 	height: 100%;
 	width: calc(100% - 20em);
 	/*min-width: 30em;*/
-	
+
 	background-color: #EFF1F5;
 }
 
 #mainFeedTextsDiv {
 	height: calc(100% - 7em);
-	
-	overflow: auto;
-}
 
-#mainFeedTexts {
+	overflow: auto;
 }
 
 #mainFeedInput {
@@ -46,13 +44,13 @@ li {
    	width: calc(100% - 3em - 20px);
    	padding: 5px 22px 5px 5px;
    	margin: auto;
-   	
+
    	background: #FFFFFF;
    	text-align: none;
-   	
+
    	border-radius: 5px;
 	border-color: #A7ADB9;
-	
+
 	resize: none;
 }
 
@@ -63,7 +61,7 @@ li {
 	width: 10em;
 	height: 100%;
 	z-index: 1;
-	
+
 	background-color: #C0C5CE;
 }
 
@@ -83,7 +81,7 @@ li {
 	position: absolute;
 	right: 0;
 	top: 0;
-	
+
 	height: 100%;
 	width: 10em;
 	background-color: #DFE1E8;

@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <title>AlpacaChat</title>
     <link rel="stylesheet" href="css/globalStyles.css">
+    <script type="text/javascript"> 
+        function scroll() {
+            var objDiv = document.getElementById("mainFeedTextsDiv");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+    </script>
 </head>
 
 
@@ -14,7 +20,7 @@
             <ul id="mainFeedTexts"></ul>
         </div>
         <!-- <div id="mainFeedInputDiv"> -->
-            <textarea id="mainFeedInput" placeholder="Write a reply..."></textarea>
+            <textarea id="mainFeedInput" placeholder="Write a reply..." oninput='scroll()'></textarea>
         <!-- </div> -->
     </div>
 
