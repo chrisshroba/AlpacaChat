@@ -15,6 +15,11 @@ app.mainFeedView = Backbone.View.extend({
         else        this.data = texts;
     },
 
+    focusTextarea: function() {
+        console.log("focusTextarea called");
+        document.getElementById("mainFeedInput").focus();
+    },
+
     scroll: function() {
         console.log("scroll called");
         var objDiv = document.getElementById("mainFeedTextsDiv");

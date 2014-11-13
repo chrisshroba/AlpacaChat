@@ -41,7 +41,7 @@ app.convoFeedView = Backbone.View.extend({
                 narrowedCollection.add(convo);
             }
         }, this);
-        
+
         return narrowedCollection;
     },
 
@@ -53,5 +53,4 @@ app.convoFeedView = Backbone.View.extend({
     clearConvos: function(){
         this.$("#convos").empty();
     }
-
 })
