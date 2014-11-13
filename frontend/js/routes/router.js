@@ -11,6 +11,14 @@ app.router = Backbone.Router.extend({
 
 	message: function(id) {
 		var convo = main.conversations.get(id);
+
+		convo.set("selected", true);
+		if(main.conversations.curSelected != null) {
+			main.conversations.curSelected.set("selected", false)
+		}
+		main.conversations.curSelected = convo;
+
+
 		main.mainFeed.data = convo.thread;
 		main.mainFeed.clearAll();
 		main.mainFeed.renderAll(main.mainFeed.data);
