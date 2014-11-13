@@ -9,6 +9,8 @@
 
 
     <!-- main feed -->
+    <div id="mainHeader"></div>
+
     <div id="mainFeed">
         <div id="mainFeedTextsDiv">
             <ul id="mainFeedTexts"></ul>
@@ -37,9 +39,13 @@
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
-        <div class="textUnit">
-            <%= body %>
-        </div>
+        <a href="#save/<%= body %>">
+            <div class="textUnit">
+                <%= body %>
+            </div>
+        </a>
+        <!--<select class="collections">-->
+        <!--</select>-->
     </script>
 
     <script id="deckTemplate" type="text/template">
@@ -54,6 +60,11 @@
                 <%= title %>
             </div>
         </a>
+    </script>
+    <script id="mainHeaderTemplate" type="text/template">
+        <div class="mainHeaderView">
+            <%= title %>
+        </div>
     </script>
 
 	<!-- dependencies -->
@@ -75,6 +86,7 @@
     <script src="frontend/js/views/deckView.js"></script>
     <script src="frontend/js/collections/deckCollection.js"></script>
     <script src="frontend/js/views/colFeedView.js"></script>
+    <script src="frontend/js/views/mainHeaderView.js"></script>
     <script src="frontend/js/main.js"></script>
 
 </html>

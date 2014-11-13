@@ -7,7 +7,8 @@ app.convoUnit = Backbone.Model.extend({
         title: "no title",
         img: "no image",
         id: 0,
-        thread: null
+        thread: null,
+        selected: false
     },
 
     initialize : function() {
