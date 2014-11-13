@@ -1,5 +1,4 @@
 var app = app || {};
-// var datmain = datmain || {};
 
 app.router = Backbone.Router.extend({
 
@@ -39,8 +38,6 @@ app.router = Backbone.Router.extend({
 	},
 
 	deckAdded: function(deck) {
-		//console.log("new deck added");
-
 		main.mainFeed.data;
 	}
 
