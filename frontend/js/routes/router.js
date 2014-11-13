@@ -24,6 +24,8 @@ app.router = Backbone.Router.extend({
 		main.mainFeed.renderAll(main.mainFeed.data);
 		main.mainFeed.scroll();
 		main.mainFeed.focusTextarea();
+
+		main.header.render();
 	}
 
 });

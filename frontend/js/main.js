@@ -58,4 +58,7 @@ var col = new app.colFeedView();
 
 var router = new app.router();
 
+
+main.header = new app.mainHeaderView()
+
 Backbone.history.start();

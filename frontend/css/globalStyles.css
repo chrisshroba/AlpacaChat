@@ -25,6 +25,11 @@ a:hover {
 .selectedConvo {
 	background-color: #EFF1F5;
 }
+.mainHeaderView {
+	position: relative;
+	left: 50%;
+	z-index: 2;
+}
 
 #cols {
 	position: relative;

@@ -14,6 +14,6 @@ app.textUnitView = Backbone.View.extend({
         var textUnitTemplate = this.template(this.model.toJSON());
         this.$el.html(textUnitTemplate);
         return this;
-    },
+    }
 
 });

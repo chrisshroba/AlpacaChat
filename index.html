@@ -9,6 +9,8 @@
 
 
     <!-- main feed -->
+    <div id="mainHeader"></div>
+
     <div id="mainFeed">
         <div id="mainFeedTextsDiv">
             <ul id="mainFeedTexts"></ul>
@@ -55,6 +57,11 @@
             </div>
         </a>
     </script>
+    <script id="mainHeaderTemplate" type="text/template">
+        <div class="mainHeaderView">
+            <%= title %>
+        </div>
+    </script>
 
 	<!-- dependencies -->
     <script src="frontend/js/libs/jquery.js"></script>
@@ -75,6 +82,7 @@
     <script src="frontend/js/views/deckView.js"></script>
     <script src="frontend/js/collections/deckCollection.js"></script>
     <script src="frontend/js/views/colFeedView.js"></script>
+    <script src="frontend/js/views/mainHeaderView.js"></script>
     <script src="frontend/js/main.js"></script>
 
 </html>
