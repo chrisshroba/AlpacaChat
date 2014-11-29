@@ -40,6 +40,10 @@ app.colFeedView = Backbone.View.extend({
     },
 
     addDeck: function(deck_model){
+        console.log("test add deck");
+
+
+        console.log(deck_model.name);
         this.data.add(deck_model);
         var newDeckView = new app.deckView({model: deck_model});
         this.$("#cols").append(newDeckView.render().el);
