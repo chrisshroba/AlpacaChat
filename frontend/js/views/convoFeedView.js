@@ -37,7 +37,7 @@ app.convoFeedView = Backbone.View.extend({
         var narrowedCollection = new app.convoUnitCollection([]);
 
         this.data.each(function(convo){
-            if(convo.get("title").indexOf(text) > -1) {
+            if(convo.get("title").toUpperCase().indexOf(text.toUpperCase()) > -1) {
                 narrowedCollection.add(convo);
             }
         }, this);
