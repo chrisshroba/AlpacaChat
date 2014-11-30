@@ -5,7 +5,7 @@ var mainFeedTexts = new app.textUnitCollection([
 
 main.mainFeed = new app.mainFeedView(mainFeedTexts);
 
-var last_id = 0;
+var last_id = 1;
 
 function generate_id() {
 	return ++last_id;
@@ -13,7 +13,7 @@ function generate_id() {
 
 
 /* converations test area */
-var testConvo = new app.convoUnit({
+var testConvo1 = new app.convoUnit({
     title: "Austin",
     id: generate_id()
 });
@@ -48,7 +48,7 @@ var testConvo8 = new app.convoUnit({
 
 
 main.conversations = new app.convoUnitCollection([
-    testConvo, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
+    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
 var convos = new app.convoFeedView(main.conversations);

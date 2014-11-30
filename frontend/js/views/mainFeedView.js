@@ -25,19 +25,20 @@ app.mainFeedView = Backbone.View.extend({
     },
 
     createOnEnter: function(e) {
-        if(e.keyCode != 13) return;
+        if(e.keyCode != 13) return; // prevents adding line break to textarea
         e.preventDefault();
         if(!this.input.val()) return;
 
         // create new text unit and add to collection
         var new_model = new app.textUnit({
             body: this.input.val(),
-            owner: "created",
+            owner: "0", // 0 is you, the sender
+            timestamp: new Date().toLocaleTimeString(), // get device time
             img: "none"
         });
 
         this.addMessage(new_model);
-        this.scroll();
+        this.scroll(); // scroll conversation to bottom
     },
 
     addMessage: function(text_model) {
