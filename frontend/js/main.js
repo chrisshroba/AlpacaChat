@@ -46,21 +46,49 @@ var testConvo8 = new app.convoUnit({
     id: generate_id()
 });
 
+//Default decks
+var favorites = new app.deckModel({
+    name: "Favorites",
+    cards: null
+});
 
+var addresses = new app.deckModel({
+    name: "Addresses",
+    cards: null
+});
+
+var datesAndTimes = new app.deckModel({
+    name: "Dates & Times",
+    cards: null
+});
+
+var links = new app.deckModel({
+    name: "Links",
+    cards: null
+});
+
+var phoneNums = new app.deckModel({
+    name: "Phone #s",
+    cards: null
+});
+
+//Conversations
 main.conversations = new app.convoUnitCollection([
     testConvo, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
 var convos = new app.convoFeedView(main.conversations);
 
-
 /* collections */
-main.col = new app.colFeedView();
+main.col = new app.colFeedView([
+    favorites, addresses, datesAndTimes, links, phoneNums
+]);
 
 /* router */
 main.route = new app.router();
 
 
-main.header = new app.mainHeaderView()
+main.header = new app.mainHeaderView();
 
 Backbone.history.start();
+

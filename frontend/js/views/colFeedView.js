@@ -30,7 +30,7 @@ app.colFeedView = Backbone.View.extend({
 
         main.route.deckAdded(new_deck);
 
-        //this.addDeck(new_deck);
+        this.addDeck(new_deck);
 
     },
 
