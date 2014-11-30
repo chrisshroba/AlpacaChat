@@ -68,7 +68,7 @@ var links = new app.deckModel({
 });
 
 var phoneNums = new app.deckModel({
-    name: "Phone #s",
+    name: "Phone Numbers",
     cards: null
 });
 

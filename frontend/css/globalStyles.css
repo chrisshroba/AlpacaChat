@@ -44,6 +44,10 @@ li {
 	padding-bottom: 10px;
 }
 
+#logout:hover {
+	text-decoration: underline;
+}
+
 #mainFeedTexts {
 	position: relative;
 	top: 20px;
@@ -99,6 +103,25 @@ li {
 	z-index: 1;
 
 	background-color: #C0C5CE;
+}
+
+#logoutDiv {
+	position: absolute;
+	bottom: 0px;
+	width: 10em;
+	height: 1.5em;
+
+	background-color: #A7ADB9;
+}
+
+#logout {
+	position: relative;
+	top: 1px;
+	left: 6px;
+
+	text-decoration: none;
+	color: #4F5B66;
+	font-size: .8em;
 }
 
 #convosDiv {
