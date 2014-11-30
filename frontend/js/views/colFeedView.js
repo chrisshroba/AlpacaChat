@@ -16,6 +16,11 @@ app.colFeedView = Backbone.View.extend({
         }else{
             this.data = new app.deckCollection([]);
         }
+        this.renderAll(this.data);
+    },
+
+    renderAll: function(defaultDecks) {
+        defaultDecks.each(this.addDeck, this)
     },
 
     createOnEnter: function(e){
