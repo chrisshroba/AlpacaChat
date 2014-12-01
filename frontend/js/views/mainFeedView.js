@@ -24,6 +24,11 @@ app.mainFeedView = Backbone.View.extend({
         objDiv.scrollTop = objDiv.scrollHeight;
     },
 
+    scrollToElement: function(elementModel) {
+        console.log("#" + elementModel.viewId.toString());
+        this.scrollToElement("#" + elementModel.viewId.toString());
+    },
+
     createOnEnter: function(e) {
         if(e.keyCode != 13) return; // prevents adding line break to textarea
         e.preventDefault();
