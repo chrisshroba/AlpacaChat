@@ -10,7 +10,7 @@ a {
 }
 
 a:hover {
-	color: #BD626B;
+	color: #2B303B;
 }
 
 #convos {
@@ -47,7 +47,7 @@ li {
 }
 
 #logout:hover {
-	text-decoration: underline;
+	color: #BD626B;
 }
 
 #mainFeedTexts {
