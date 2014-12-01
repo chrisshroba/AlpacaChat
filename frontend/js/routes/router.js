@@ -28,7 +28,7 @@ app.router = Backbone.Router.extend({
 	},
 
 	savedMessage: function(body) {
-		console.log(body);
+		//console.log(body);
 
 		//var curTextUnit = main.mainFeed.data.get(body);
 		var newDeckModel = new app.deckModel({
