@@ -54,6 +54,7 @@ app.router = Backbone.Router.extend({
 		var favoritesDeck = main.col.data.get("Favorites");
 		favoritesDeck.cards.add(foundText);
 
+
 	},
 
 	openDeck: function(deckId) {
