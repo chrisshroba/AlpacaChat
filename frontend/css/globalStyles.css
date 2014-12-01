@@ -94,6 +94,7 @@ a:hover {
 
 #logout:hover {
 	color: #BD626B;
+	color: #EFF1F5;
 }
 
 #mainFeedTexts {
@@ -168,7 +169,7 @@ a:hover {
 	left: 6px;
 
 	text-decoration: none;
-	color: #C0C5CE;
+	color: #A7ADB9;
 	font-size: .8em;
 }
 
