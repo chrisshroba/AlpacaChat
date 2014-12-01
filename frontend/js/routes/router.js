@@ -42,12 +42,12 @@ app.router = Backbone.Router.extend({
 		//main.col.addDeck(newDeckModel);
 
 		//click scroll
-		//main.mainFeed.scrollFind(id)
+		main.mainFeed.scrollFind(element)
 
 
 		var foundText = main.mainFeed.data.get(element);
 		if(foundText == undefined) {
-			console.log("early return");
+			//console.log("early return");
 			return;
 		}
 
@@ -58,7 +58,7 @@ app.router = Backbone.Router.extend({
 
 	openDeck: function(deckId) {
 		var targetDeck = main.col.data.get(deckId);
-		console.log(targetDeck.cards.toJSON());
+		//console.log(targetDeck.cards.toJSON());
 
 	},
 
