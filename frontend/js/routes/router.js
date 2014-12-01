@@ -5,7 +5,8 @@ app.router = Backbone.Router.extend({
 	routes: {
 
 		"message/:id":"message",
-		"save/:body":"savedMessage"
+		"save/:id":"savedMessage",
+		"deck/:id":"openDeck"
 
 	},
 
@@ -27,16 +28,39 @@ app.router = Backbone.Router.extend({
 		main.header.render();
 
 		main.col.data = convo.decks;
+		main.col.clearAll();
+		console.log(main.col.data.toJSON());
+		main.col.renderAll(main.col.data);
 	},
 
-	savedMessage: function(body) {
-		//console.log(body);
+	savedMessage: function(element) {
 
-		//var curTextUnit = main.mainFeed.data.get(body);
-		var newDeckModel = new app.deckModel({
-			name: body
-		});
+		//click save unit in collection
+		//var newDeckModel = new app.deckModel({
+		//	name: body
+		//});
 		//main.col.addDeck(newDeckModel);
+
+		//click scroll
+		main.mainFeed.scrollFind(element)
+
+
+		var foundText = main.mainFeed.data.get(element);
+		if(foundText == undefined) {
+			//console.log("early return");
+			return;
+		}
+
+		var favoritesDeck = main.col.data.get("Favorites");
+		favoritesDeck.cards.add(foundText);
+
+
+	},
+
+	openDeck: function(deckId) {
+		var targetDeck = main.col.data.get(deckId);
+		//console.log(targetDeck.cards.toJSON());
+
 	},
 
 	deckAdded: function(deck) {

@@ -7,6 +7,7 @@ app.textUnit = Backbone.Model.extend({
         body: "empty",
         owner: "no owner",
         timestamp: "n/a",
-        img: "images/placeholder_textunit.jpg"
+        img: "images/placeholder_textunit.jpg",
+        id: "no_id"
     }
 });

@@ -46,35 +46,6 @@ var testConvo8 = new app.convoUnit({
     id: generate_id()
 });
 
-//Default decks
-var favorites = new app.deckModel({
-    name: "Favorites",
-    cards: null
-});
-
-var addresses = new app.deckModel({
-    name: "Addresses",
-    cards: null
-});
-
-var datesAndTimes = new app.deckModel({
-    name: "Dates & Times",
-    cards: null
-});
-
-var links = new app.deckModel({
-    name: "Links",
-    cards: null
-});
-
-var phoneNums = new app.deckModel({
-    name: "Phone Numbers",
-    cards: null
-});
-
-var decks = new app.deckCollection([
-    favorites, addresses, datesAndTimes, links, phoneNums
-]);
 
 //Conversations
 main.conversations = new app.convoUnitCollection([
@@ -84,7 +55,8 @@ main.conversations = new app.convoUnitCollection([
 var convos = new app.convoFeedView(main.conversations);
 
 /* collections */
-main.col = new app.colFeedView(decks);
+main.col = new app.colFeedView();
+
 
 /* router */
 main.route = new app.router();

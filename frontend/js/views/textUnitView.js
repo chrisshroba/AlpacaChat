@@ -10,7 +10,14 @@ app.textUnitView = Backbone.View.extend({
                                                                         // TODO: place templates in a file and distribute via CDN
                                                                         // TODO: build template in index.html
 
+    attributes : function () {
+        return {
+            id : this.model.get("id")
+        };
+    },
+
     render: function() {
+
         var textUnitTemplate = this.template(this.model.toJSON());
         this.$el.html(textUnitTemplate);
         return this;

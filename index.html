@@ -33,7 +33,8 @@
     <!-- collection view -->
     <div id="colFeed">
         <div id="colsDiv">
-            <ul id="cols"></ul>
+            <ul id="cols">
+            </ul>
         </div>
         <input id="createNewCollection" type="text" placeholder="New Collection...">
         <!-- <button type="button" onclick= "">Create New Collection</button> -->
@@ -42,7 +43,7 @@
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
-        <a href="#save/<%= body %>">
+        <a href="#save/<%= id %>">
             <div class="textUnit">
                 <%= body %>
                 <br>
@@ -56,9 +57,14 @@
     </script>
 
     <script id="deckTemplate" type="text/template">
-        <div class="deck">
-            <%= name %>
-        </div>
+        <a href="#deck/<%= id %>">
+            <div class="deck">
+                <%= name %>
+                <ul id="collectionTexts">
+
+                </ul>
+            </div>
+        </a>
     </script>
 
     <script id="convoUnitView" type="text/template">
@@ -78,6 +84,7 @@
     <script src="frontend/js/libs/jquery.js"></script>
     <script src="frontend/js/libs/underscore.js"></script>
 	<script src="frontend/js/libs/backbone.js"></script>
+    <script src="frontend/js/libs/extensions.js"></script>
 
     <!-- backbone -->
     <script src="frontend/js/models/textUnitModel.js"></script>

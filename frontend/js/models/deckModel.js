@@ -4,7 +4,8 @@ app.deckModel = Backbone.Model.extend({
 
     defaults: {
         name: "no name",
-        cards: null
+        cards: null,
+        id:"no_id"
     },
 
     initialize: function(){

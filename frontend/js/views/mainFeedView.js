@@ -24,6 +24,11 @@ app.mainFeedView = Backbone.View.extend({
         objDiv.scrollTop = objDiv.scrollHeight;
     },
 
+    scrollFind: function(elementId) {
+        //console.log("#" + elementId);
+        this.scrollToElement("#" + elementId);
+    },
+
     createOnEnter: function(e) {
         if(e.keyCode != 13) return; // prevents adding line break to textarea
         e.preventDefault();
@@ -34,7 +39,8 @@ app.mainFeedView = Backbone.View.extend({
             body: this.input.val(),
             owner: "0", // 0 is you, the sender
             timestamp: new Date().toLocaleTimeString(), // get device time
-            img: "none"
+            img: "none",
+            id: this.input.val().toString() + ((new Date()).getTime()) + "0"
         });
 
         this.addMessage(new_model);

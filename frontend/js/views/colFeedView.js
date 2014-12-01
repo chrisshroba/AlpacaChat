@@ -14,7 +14,7 @@ app.colFeedView = Backbone.View.extend({
         if(cols){
             this.data=cols;
         }else{
-            this.data = new app.deckCollection([]);
+            this.data = new app.deckCollection();
         }
         this.renderAll(this.data);
     },
@@ -23,14 +23,23 @@ app.colFeedView = Backbone.View.extend({
         defaultDecks.each(this.addDeck, this)
     },
 
+    clearAll: function() {
+        this.$("#cols").html("");
+    },
+
     createOnEnter: function(e){
         if(e.keyCode != 13) return;
         if(!this.input.val()) return;
+        if(this.data.get(this.input.val()) != undefined) {
+            console.log("early return");
+            return;
+        }
 
         //create new deck
         var new_deck = new app.deckModel({
             name: this.input.val(),
-            cards: null
+            cards: null,
+            id: this.input.val()
         });
 
         main.route.deckAdded(new_deck);
@@ -40,6 +49,7 @@ app.colFeedView = Backbone.View.extend({
     },
 
     addDeck: function(deck_model){
+        //console.log(deck_model.name);
         this.data.add(deck_model);
         var newDeckView = new app.deckView({model: deck_model});
         this.$("#cols").append(newDeckView.render().el);
