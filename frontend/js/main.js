@@ -41,10 +41,6 @@ var testConvo7 = new app.convoUnit({
     title: "Brendan",
     id: generate_id()
 });
-var testConvo8 = new app.convoUnit({
-    title: "Victoria",
-    id: generate_id()
-});
 
 //Default decks
 var favorites = new app.deckModel({
@@ -78,7 +74,7 @@ var decks = new app.deckCollection([
 
 //Conversations
 main.conversations = new app.convoUnitCollection([
-    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
+    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7
 ]);
 
 var convos = new app.convoFeedView(main.conversations);
