@@ -72,6 +72,10 @@ var phoneNums = new app.deckModel({
     cards: null
 });
 
+var decks = new app.deckCollection([
+    favorites, addresses, datesAndTimes, links, phoneNums
+]);
+
 //Conversations
 main.conversations = new app.convoUnitCollection([
     testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
@@ -80,9 +84,7 @@ main.conversations = new app.convoUnitCollection([
 var convos = new app.convoFeedView(main.conversations);
 
 /* collections */
-main.col = new app.colFeedView([
-    favorites, addresses, datesAndTimes, links, phoneNums
-]);
+main.col = new app.colFeedView(decks);
 
 /* router */
 main.route = new app.router();
