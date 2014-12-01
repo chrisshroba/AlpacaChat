@@ -14,31 +14,35 @@ function generate_id() {
 
 /* converations test area */
 var testConvo1 = new app.convoUnit({
-    title: "Austin",
+    title: "Austin Gadbois",
     id: generate_id()
 });
 var testConvo2 = new app.convoUnit({
-    title: "Blade",
+    title: "Blade Chapman",
     id: generate_id()
 });
 var testConvo3 = new app.convoUnit({
-    title: "Claire",
+    title: "Claire Sheong",
     id: generate_id()
 });
 var testConvo4 = new app.convoUnit({
-    title: "Chris",
+    title: "Chris Shroba",
     id: generate_id()
 });
 var testConvo5 = new app.convoUnit({
-    title: "Marie",
+    title: "Marie Lin",
     id: generate_id()
 });
 var testConvo6 = new app.convoUnit({
-    title: "Niki",
+    title: "Niki Wells",
     id: generate_id()
 });
 var testConvo7 = new app.convoUnit({
-    title: "Brendan",
+    title: "Brendan Moriarty",
+    id: generate_id()
+});
+var testConvo8 = new app.convoUnit({
+    title: "Venkatanarasimha Muthukrishnan",
     id: generate_id()
 });
 
@@ -74,7 +78,7 @@ var decks = new app.deckCollection([
 
 //Conversations
 main.conversations = new app.convoUnitCollection([
-    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7
+    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
 var convos = new app.convoFeedView(main.conversations);

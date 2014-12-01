@@ -7,6 +7,7 @@ html {
 a {
 	text-decoration: none;
 	color: #4F5B66;
+	word-wrap: break-word;
 }
 
 a:hover {
@@ -15,16 +16,37 @@ a:hover {
 
 #convos {
 	position: relative;
-	right: 17px;
 
-	list-style-type: none;
+	list-style: none;
+	padding-left: 0;
 	line-height: 1.2;
 	color: #4F5B66;
 }
 
+#convos a {
+	display: inline-block;
+	width: 100%;
+	padding-left: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .selectedConvo a {
 	color: #2B303B;
-	text-indent: 1em;
+	background-color: #A7ADB9;
+}
+
+#cols li {
+	display: inline-block;
+	width: 100%;
+	padding-left: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.selectedCol li {
+	color: #2B303B;
+	background-color: #A7ADB9;
 }
 
 .mainHeaderView {
@@ -35,15 +57,11 @@ a:hover {
 
 #cols {
 	position: relative;
-	right: 17px;
 
-	list-style-type: none;
+	list-style: none;
+	padding-left: 0;
 	line-height: 1.2;
 	color: #65737D;
-}
-
-li {
-	padding-bottom: 10px;
 }
 
 #logout:hover {
