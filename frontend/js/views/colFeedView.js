@@ -30,11 +30,16 @@ app.colFeedView = Backbone.View.extend({
     createOnEnter: function(e){
         if(e.keyCode != 13) return;
         if(!this.input.val()) return;
+        if(this.data.get(this.input.val()) != undefined) {
+            console.log("early return");
+            return;
+        }
 
         //create new deck
         var new_deck = new app.deckModel({
             name: this.input.val(),
-            cards: null
+            cards: null,
+            id: this.input.val()
         });
 
         main.route.deckAdded(new_deck);

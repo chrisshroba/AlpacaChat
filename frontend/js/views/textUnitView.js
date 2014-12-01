@@ -12,7 +12,7 @@ app.textUnitView = Backbone.View.extend({
 
     attributes : function () {
         return {
-            id : this.model.get("viewId")
+            id : this.model.get("id")
         };
     },
 

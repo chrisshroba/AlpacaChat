@@ -32,7 +32,7 @@ app.router = Backbone.Router.extend({
 		main.col.renderAll(main.col.data);
 	},
 
-	savedMessage: function(id) {
+	savedMessage: function(element) {
 
 		//click save unit in collection
 		//var newDeckModel = new app.deckModel({
@@ -41,8 +41,19 @@ app.router = Backbone.Router.extend({
 		//main.col.addDeck(newDeckModel);
 
 		//click scroll
+		//main.mainFeed.scrollFind(id)
 
-		main.mainFeed.scrollFind(id)
+
+		var foundText = main.mainFeed.data.get(element);
+		if(foundText == undefined) {
+			console.log("early return");
+			return;
+		}
+
+		var favoritesDeck = main.col.data.get("Favorites");
+		console.log(favoritesDeck.toJSON());
+		favoritesDeck.cards.add(foundText);
+		console.log(main.col.data.get("Favorites").cards.toJSON());
 
 	},
 
