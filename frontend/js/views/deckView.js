@@ -15,9 +15,12 @@ app.deckView = Backbone.View.extend({
     render: function(){
         var deckTemplate = this.template(this.model.toJSON());
         this.$el.html(deckTemplate);
-        return this;
 
-        this.model.each(this.renderList, this);
+        //console.log("render called");
+        //console.log(this.model.toJSON());
+        this.model.cards.each(this.renderList, this);
+
+        return this;
     },
 
     renderList: function(text_model){
