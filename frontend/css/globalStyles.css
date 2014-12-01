@@ -57,6 +57,11 @@ li {
 	line-height: 1.2;
 }
 
+.timestamp {
+	position: relative;
+	font-size: 0.2em;
+}
+
 #mainFeed {
 	position: absolute;
 	left: 10em;

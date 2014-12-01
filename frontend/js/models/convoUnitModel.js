@@ -8,10 +8,12 @@ app.convoUnit = Backbone.Model.extend({
         img: "no image",
         id: 0,
         thread: null,
+        decks: null,
         selected: false
     },
 
     initialize : function() {
         this.thread = new app.textUnitCollection([]);
+        this.decks = new app.deckCollection([]);
     }
 });

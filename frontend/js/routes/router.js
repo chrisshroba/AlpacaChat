@@ -25,6 +25,8 @@ app.router = Backbone.Router.extend({
 		main.mainFeed.scroll();
 		main.mainFeed.focusTextarea();
 		main.header.render();
+
+		main.col.data = convo.decks;
 	},
 
 	savedMessage: function(body) {
@@ -34,7 +36,7 @@ app.router = Backbone.Router.extend({
 		var newDeckModel = new app.deckModel({
 			name: body
 		});
-		main.col.addDeck(newDeckModel);
+		//main.col.addDeck(newDeckModel);
 	},
 
 	deckAdded: function(deck) {
