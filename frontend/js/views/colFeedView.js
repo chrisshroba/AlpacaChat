@@ -14,7 +14,7 @@ app.colFeedView = Backbone.View.extend({
         if(cols){
             this.data=cols;
         }else{
-            this.data = new app.deckCollection([]);
+            this.data = new app.deckCollection();
         }
         this.renderAll(this.data);
     },

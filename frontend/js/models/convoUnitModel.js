@@ -14,6 +14,6 @@ app.convoUnit = Backbone.Model.extend({
 
     initialize : function() {
         this.thread = new app.textUnitCollection([]);
-        this.decks = new app.deckCollection([]);
+        this.decks = new app.deckCollection();
     }
 });

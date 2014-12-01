@@ -28,12 +28,13 @@ app.router = Backbone.Router.extend({
 
 		main.col.data = convo.decks;
 		main.col.clearAll();
+		console.log(main.col.data.toJSON());
 		main.col.renderAll(main.col.data);
 	},
 
 	savedMessage: function(id) {
 
-		// click save unit in collection
+		//click save unit in collection
 		//var newDeckModel = new app.deckModel({
 		//	name: body
 		//});
