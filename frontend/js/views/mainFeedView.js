@@ -34,7 +34,8 @@ app.mainFeedView = Backbone.View.extend({
             body: this.input.val(),
             owner: "0", // 0 is you, the sender
             timestamp: new Date().toLocaleTimeString(), // get device time
-            img: "none"
+            img: "none",
+            viewId: this.input.val().toString() + (new Date().toLocaleTimeString()) + "0"
         });
 
         this.addMessage(new_model);
