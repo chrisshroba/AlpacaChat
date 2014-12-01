@@ -59,6 +59,7 @@ app.router = Backbone.Router.extend({
 	openDeck: function(deckId) {
 		var targetDeck = main.col.data.get(deckId);
 		console.log(targetDeck.cards.toJSON());
+
 	},
 
 	deckAdded: function(deck) {
