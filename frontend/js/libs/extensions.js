@@ -1,9 +1,14 @@
 Backbone.View.prototype.scrollToElement = function (selector, time, verticalOffset) {
-    var time = typeof(time) != 'undefined' ? time : 200,
-        verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0,
-        element = $(selector),
-        offset = element.offset(),
-        offsetTop = offset.top + verticalOffset;
 
-    $('html, body').animate({ scrollTop: offsetTop }, time);
+    var time = typeof(time) != 'undefined' ? time : 200;
+    var verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    var element = $(selector);
+    if (typeof(element.offset()) == 'undefined') {
+        return;
+    }
+    var offset = element.offset();
+    var offsetTop = offset.top + verticalOffset;
+
+
+    $('#mainFeedTextsDiv').animate({ scrollTop: offsetTop }, time);
 }

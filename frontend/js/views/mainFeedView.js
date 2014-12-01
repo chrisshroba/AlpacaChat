@@ -24,9 +24,9 @@ app.mainFeedView = Backbone.View.extend({
         objDiv.scrollTop = objDiv.scrollHeight;
     },
 
-    scrollToElement: function(elementModel) {
-        console.log("#" + elementModel.viewId.toString());
-        this.scrollToElement("#" + elementModel.viewId.toString());
+    scrollFind: function(elementId) {
+        //console.log("#" + elementId);
+        this.scrollToElement("#" + elementId);
     },
 
     createOnEnter: function(e) {
@@ -40,7 +40,7 @@ app.mainFeedView = Backbone.View.extend({
             owner: "0", // 0 is you, the sender
             timestamp: new Date().toLocaleTimeString(), // get device time
             img: "none",
-            viewId: this.input.val().toString() + (new Date().toLocaleTimeString()) + "0"
+            viewId: this.input.val().toString() + ((new Date()).getTime()) + "0"
         });
 
         this.addMessage(new_model);

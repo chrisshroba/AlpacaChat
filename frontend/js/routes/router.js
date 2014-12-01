@@ -5,7 +5,7 @@ app.router = Backbone.Router.extend({
 	routes: {
 
 		"message/:id":"message",
-		"save/:body":"savedMessage"
+		"save/:id":"savedMessage"
 
 	},
 
@@ -27,14 +27,18 @@ app.router = Backbone.Router.extend({
 		main.header.render();
 	},
 
-	savedMessage: function(body) {
-		//console.log(body);
+	savedMessage: function(id) {
 
-		//var curTextUnit = main.mainFeed.data.get(body);
-		var newDeckModel = new app.deckModel({
-			name: body
-		});
-		main.col.addDeck(newDeckModel);
+		// click save unit in collection
+		//var newDeckModel = new app.deckModel({
+		//	name: body
+		//});
+		//main.col.addDeck(newDeckModel);
+
+		//click scroll
+
+		main.mainFeed.scrollFind(id)
+
 	},
 
 	deckAdded: function(deck) {
