@@ -23,6 +23,10 @@ app.colFeedView = Backbone.View.extend({
         defaultDecks.each(this.addDeck, this)
     },
 
+    clearAll: function() {
+        this.$("#cols").html("");
+    },
+
     createOnEnter: function(e){
         if(e.keyCode != 13) return;
         if(!this.input.val()) return;

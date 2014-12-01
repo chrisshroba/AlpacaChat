@@ -84,7 +84,7 @@ main.conversations = new app.convoUnitCollection([
 var convos = new app.convoFeedView(main.conversations);
 
 /* collections */
-main.col = new app.colFeedView(decks);
+main.col = new app.colFeedView(/*decks*/);
 
 
 /* router */

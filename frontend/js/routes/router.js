@@ -25,6 +25,10 @@ app.router = Backbone.Router.extend({
 		main.mainFeed.scroll();
 		main.mainFeed.focusTextarea();
 		main.header.render();
+
+		main.col.data = convo.decks;
+		main.col.clearAll();
+		main.col.renderAll(main.col.data);
 	},
 
 	savedMessage: function(id) {
