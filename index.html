@@ -12,6 +12,11 @@
     <div id="mainHeader"></div>
 
     <div id="mainFeed">
+        <script id="mainHeaderTemplate" type="text/template">
+            <div class="mainHeaderView">
+                <%= title %>
+            </div>
+        </script>
         <div id="mainFeedTextsDiv">
             <ul id="mainFeedTexts"></ul>
         </div>
@@ -63,11 +68,6 @@
                 <%= title %>
             </div>
         </a>
-    </script>
-    <script id="mainHeaderTemplate" type="text/template">
-        <div class="mainHeaderView">
-            <%= title %>
-        </div>
     </script>
 
 	<!-- dependencies -->
