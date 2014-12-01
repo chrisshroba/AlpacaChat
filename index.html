@@ -52,9 +52,11 @@
     </script>
 
     <script id="deckTemplate" type="text/template">
-        <div class="deck">
-            <%= name %>
-        </div>
+        <a href="#deck/<%= id %>">
+            <div class="deck">
+                <%= name %>
+            </div>
+        </a>
     </script>
 
     <script id="convoUnitView" type="text/template">

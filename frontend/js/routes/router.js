@@ -5,7 +5,8 @@ app.router = Backbone.Router.extend({
 	routes: {
 
 		"message/:id":"message",
-		"save/:id":"savedMessage"
+		"save/:id":"savedMessage",
+		"deck/:id":"openDeck"
 
 	},
 
@@ -51,10 +52,13 @@ app.router = Backbone.Router.extend({
 		}
 
 		var favoritesDeck = main.col.data.get("Favorites");
-		console.log(favoritesDeck.toJSON());
 		favoritesDeck.cards.add(foundText);
-		console.log(main.col.data.get("Favorites").cards.toJSON());
 
+	},
+
+	openDeck: function(deckId) {
+		var targetDeck = main.col.data.get(deckId);
+		console.log(targetDeck.cards.toJSON());
 	},
 
 	deckAdded: function(deck) {
