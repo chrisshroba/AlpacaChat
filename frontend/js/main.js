@@ -64,5 +64,23 @@ main.route = new app.router();
 
 main.header = new app.mainHeaderView();
 
+
+/* Setup socket.io stuff */
+
+var socket = io("http://localhost:3000");
+socket.on("chat message",function(msg){
+        main.mainFeed.addMessage( new app.textUnit(
+            {
+                body: msg,
+                owner: "1",
+                timestamp: new Date().toLocaleTimeString(),
+                img: "none",
+                id: msg + ((new Date()).getTime()) + "1"
+            }
+        ))
+      });
+
+
+
 Backbone.history.start();
 
