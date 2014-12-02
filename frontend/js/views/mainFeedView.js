@@ -44,6 +44,7 @@ app.mainFeedView = Backbone.View.extend({
             img: "none",
             id: ((new Date()).getTime()) + "0"
         });
+        this.input.val('');
 
         this.addMessage(new_model);
         this.scroll(); // scroll conversation to bottom
@@ -53,7 +54,6 @@ app.mainFeedView = Backbone.View.extend({
         this.data.add(text_model);
         var textView = new app.textUnitView({model: text_model});
         this.$("#mainFeedTexts").append(textView.render().el);
-        this.input.val('');
     },
 
     renderAll: function(collection) {
