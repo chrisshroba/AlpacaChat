@@ -21,7 +21,7 @@
             <ul id="mainFeedTexts"></ul>
         </div>
         </ul>
-        <textarea id="mainFeedInput" placeholder="Write a reply..." autofocus></textarea>
+        <textarea id="mainFeedInput" placeholder="Send a message..." autofocus></textarea>
     </div>
 
     <!-- convo feed -->
@@ -42,21 +42,28 @@
             </ul>
         </div>
         <input id="createNewCollection" type="text" placeholder="New Collection...">
-        <!-- <button type="button" onclick= "">Create New Collection</button> -->
+    </div>
+
+    <!-- card view -->
+    <div id="cardFeed">
+        <div id="cardDiv">
+            <ul id="cards">
+            </ul>
+        </div>
+        <input id="searchCards" type="text" placeholder="Search Messages...">
     </div>
 
 
     <!-- templates -->
     <script id="textUnitView" type="text/template">
-        <a href="#save/<%= id %>">
-            <div class="textUnit">
+        <div id="textUnitDiv">
+            <a href="#save/<%= id %>">
                 <%= body %>
-                <br>
-                <div class="timestamp">
-                    <%= timestamp %>
-                </div>
-            </div>
-        </a>
+            </a>
+        </div>
+        <div class="timestamp">
+            <%= timestamp %>
+        </div>
         <!--<select class="collections">-->
         <!--</select>-->
     </script>
@@ -85,6 +92,7 @@
     <script src="frontend/js/libs/underscore.js"></script>
 	<script src="frontend/js/libs/backbone.js"></script>
     <script src="frontend/js/libs/extensions.js"></script>
+    <script src="frontend/js/libs/timestamp.js"></script>
 
     <!-- backbone -->
     <script src="frontend/js/models/textUnitModel.js"></script>
