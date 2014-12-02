@@ -63,11 +63,11 @@ app.router = Backbone.Router.extend({
 
 		main.mainFeed.clearAll();
 		main.mainFeed.renderAll(main.mainFeed.data);
-	
+
 
 		main.mainFeed.scrollFind(element);
 
-		$("#mainFeedTexts").children(".selectedMessage").css("background-color","C0C5CE").animate({backgroundColor:"#EFF1F5"},600)
+		$("#mainFeedTexts").children(".selectedMessage").children("div").children("a").css({backgroundColor:"#C0C5Ce", borderColor:"#C0C5CE"}).animate({backgroundColor:"#DFE1E8", borderColor:"#DFE1E8"},600);
 
 		main.mainFeed.data.curSelected = mess;
 
