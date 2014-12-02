@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        console.log('http://' + document.domain + ':' + location.port);
+        socket.on('connect', function() {
+            console.log("start");
+            socket.emit('messagee', {data: 'I\'m connected!'});
+            console.log("end");
+        });
+        socket.on('foo', function() {
+            console.log("foo");
+        });
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

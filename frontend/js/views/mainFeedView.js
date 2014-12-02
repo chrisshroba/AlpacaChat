@@ -34,6 +34,8 @@ app.mainFeedView = Backbone.View.extend({
         e.preventDefault();
         if(!this.input.val()) return;
 
+        socket.emit("chat message", this.input.val());
+
         // create new text unit and add to collection
         var new_model = new app.textUnit({
             body: this.input.val(),
