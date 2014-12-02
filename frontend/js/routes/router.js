@@ -19,6 +19,7 @@ app.router = Backbone.Router.extend({
 		var targetThread = main.convos.data.at(0);
 		this.navigate("message/" + targetThread.id, {trigger: true});
 		//this.message(targetThread.id);
+
 	},
 
 	message: function(id) {
