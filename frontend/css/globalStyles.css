@@ -56,6 +56,11 @@ a:hover {
 	background-color: #A7ADB9;
 }
 
+/*.selectedMessage a {
+	color: #2B303B;
+	background-color: #A7ADB9;	
+}*/
+
 #cols li {
 	display: inline-block;
 	width: 90%; /* change */

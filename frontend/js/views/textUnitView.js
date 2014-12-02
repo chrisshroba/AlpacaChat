@@ -20,6 +20,7 @@ app.textUnitView = Backbone.View.extend({
 
         var textUnitTemplate = this.template(this.model.toJSON());
         this.$el.html(textUnitTemplate);
+        this.$el.toggleClass("selectedMessage", this.model.get("selected"));
         return this;
     }
 
