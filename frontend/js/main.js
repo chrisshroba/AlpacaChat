@@ -69,6 +69,7 @@ main.header = new app.mainHeaderView();
 
 var socket = io("http://shroba.io:3000");
 socket.on("chat message",function(msg){
+
         main.mainFeed.addMessage( new app.textUnit(
             {
                 body: msg,
@@ -79,7 +80,8 @@ socket.on("chat message",function(msg){
             }
         ));
         main.mainFeed.scroll();
-      });
+
+        });
 
 
 
