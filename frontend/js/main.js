@@ -67,7 +67,7 @@ main.header = new app.mainHeaderView();
 
 /* Setup socket.io stuff */
 
-var socket = io("http://shroba.io:3000");
+var socket = io("http://107.170.37.184:3000");
 socket.on("chat message",function(msg){
         main.mainFeed.addMessage( new app.textUnit(
             {
