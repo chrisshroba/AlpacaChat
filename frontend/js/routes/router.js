@@ -40,7 +40,7 @@ app.router = Backbone.Router.extend({
 
 		main.col.data = convo.decks;
 		main.col.clearAll();
-		console.log(main.col.data.toJSON());
+		// console.log(main.col.data.toJSON());
 		main.col.renderAll(main.col.data);
 	},
 
@@ -53,8 +53,22 @@ app.router = Backbone.Router.extend({
 		//main.col.addDeck(newDeckModel);
 
 		//click scroll
-		main.mainFeed.scrollFind(element)
+		var mess = main.mainFeed.data.get(element);
+		mess.set("selected",true);
+		if(main.mainFeed.data.curSelected != null) {
+			main.mainFeed.data.curSelected.set("selected", false);
+			console.log("selected");
+		}
 
+		main.mainFeed.clearAll();
+		main.mainFeed.renderAll(main.mainFeed.data);
+	
+
+		main.mainFeed.scrollFind(element);
+
+		$("#mainFeedTexts").children(".selectedMessage").css("background-color","C0C5CE").animate({backgroundColor:"#EFF1F5"},600)
+
+		main.mainFeed.data.curSelected = mess;
 
 		var foundText = main.mainFeed.data.get(element);
 		if(foundText == undefined) {
@@ -64,6 +78,14 @@ app.router = Backbone.Router.extend({
 
 		var favoritesDeck = main.col.data.get("Favorites");
 		favoritesDeck.cards.add(foundText);
+
+		// mess.set("selected",false);
+		// if(main.mainFeed.data.curSelected != null) {
+		// 	main.mainFeed.data.curSelected.set("selected", false);
+		// 	console.log("deselected");
+		// }
+		// main.mainFeed.clearAll();
+		// main.mainFeed.renderAll(main.mainFeed.data);
 
 
 	},
