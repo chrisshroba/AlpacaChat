@@ -4,10 +4,21 @@ app.router = Backbone.Router.extend({
 
 	routes: {
 
+		"":"noRoute",
 		"message/:id":"message",
 		"save/:id":"savedMessage",
 		"deck/:id":"openDeck"
 
+	},
+
+	noRoute:function(id) {
+		if(main.convos.data.length == 0) {
+			return;
+		}
+
+		var targetThread = main.convos.data.at(0);
+		this.navigate("message/" + targetThread.id, {trigger: true});
+		//this.message(targetThread.id);
 	},
 
 	message: function(id) {

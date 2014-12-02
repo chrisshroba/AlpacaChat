@@ -52,7 +52,7 @@ main.conversations = new app.convoUnitCollection([
     testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
 ]);
 
-var convos = new app.convoFeedView(main.conversations);
+main.convos = new app.convoFeedView(main.conversations);
 
 /* collections */
 main.col = new app.colFeedView();
