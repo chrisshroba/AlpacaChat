@@ -70,7 +70,7 @@ a:hover {
 	background-color: #D9DDEC;
 }
 
-.timestamp {
+#mainFeedTexts .timestamp {
 	position: relative;
 	z-index: 0;
 	bottom: 2em;
@@ -87,7 +87,7 @@ a:hover {
 
 #cols a {
 	display: inline-block;
-	width: 88%; /* change */
+	width: 90%; /* change */
 	padding-left: 16px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -235,9 +235,39 @@ a:hover {
 	background-color: #DFE1E8;
 }
 
+.deck {
+	text-align: left;
+}
+
+#collectionTexts {
+	position: relative;
+	right: 10px;
+
+	list-style: none;
+	padding-left: 0;
+	line-height: 1.2;
+}
+
+#collectionTexts a {
+	text-align: left;
+}
+
+#collectionTexts .timestamp {
+	position: relative;
+	left: 0px;
+	z-index: 0;
+	bottom: 2em;
+	display: block;
+	font-size: 0.6em;
+	color: #C0C5CE;
+	text-align: right;
+}
+
 #colsDiv {
 	position: absolute;
 	top: 1.5em;
+	right: 0;
+	width: 100%;
 	height: calc(100% - 2em - 10px);
 
 	overflow: auto;
