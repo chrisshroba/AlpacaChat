@@ -9,6 +9,7 @@ app.textUnit = Backbone.Model.extend({
         timestamp: "n/a",
         img: "images/placeholder_textunit.jpg",
         id: "no_id",
-        selected: false
+        selected: false,
+        saved: false
     }
 });

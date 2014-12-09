@@ -22,7 +22,7 @@ var testConvo2 = new app.convoUnit({
     id: generate_id()
 });
 var testConvo3 = new app.convoUnit({
-    title: "Claire Sheong",
+    title: "Brendan Moriarty",
     id: generate_id()
 });
 var testConvo4 = new app.convoUnit({
@@ -30,26 +30,23 @@ var testConvo4 = new app.convoUnit({
     id: generate_id()
 });
 var testConvo5 = new app.convoUnit({
-    title: "Marie Lin",
+    title: "Claire Sheong",
     id: generate_id()
 });
 var testConvo6 = new app.convoUnit({
-    title: "Niki Wells",
+    title: "Marie Lin",
     id: generate_id()
 });
 var testConvo7 = new app.convoUnit({
-    title: "Brendan Moriarty",
+    title: "Niki Wells",
     id: generate_id()
 });
-var testConvo8 = new app.convoUnit({
-    title: "Venkatanarasimha Muthukrishnan",
-    id: generate_id()
-});
+
 
 
 //Conversations
 main.conversations = new app.convoUnitCollection([
-    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
+    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7
 ]);
 
 main.convos = new app.convoFeedView(main.conversations);
