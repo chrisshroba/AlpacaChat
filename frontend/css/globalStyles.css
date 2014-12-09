@@ -55,6 +55,8 @@ a:hover {
 #textUnitDiv {
 	margin-top: 3px;
 	width: calc(100% - 3em);
+	word-break:break-all;
+
 	/*text-align: right;*/
 }
 
