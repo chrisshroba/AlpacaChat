@@ -44,12 +44,22 @@ a:hover {
 	background-color: #A7ADB9;
 }
 
-.myMessage {
-	text-align: right;
+#mainFeedTexts .myMessage{
+    text-align: right;
 }
 
-.theirMessage {
+#mainFeedTexts .myMessage a{
+text-align: right;
+background-color: #EBF1FF;
+border-color: #D9E4FF;
+
+}
+
+
+#mainFeedTexts .theirMessage a{
 	text-align: left;
+    background-color: #ECECEC;
+    border-color: #DFDFDF;
 }
 
 #textUnitDiv {
@@ -132,7 +142,7 @@ a:hover {
 	padding-top: 10px;
 	padding-bottom: 10px;
 
-	background-color: #EFF1F5;
+	/*background-color: #EFF1F5;*/
 }
 
 #cols {
@@ -167,7 +177,7 @@ a:hover {
 	width: calc(100% - 20em);
 	/*min-width: 30em;*/
 
-	background-color: #EFF1F5;
+	background-color: #FAFCFF;
 }
 
 #mainFeedTextsDiv {
@@ -229,7 +239,7 @@ a:hover {
 	position: absolute;
 	top: 1.5em;
 	height: calc(100% - 2em - 10px);
-
+    background-color: #ACC4F5;
 	overflow: auto;
 }
 
@@ -291,19 +301,20 @@ a:hover {
 	width: 100%;
 	height: calc(100% - 2em - 10px);
 
+    background-color: #D9E5FF;
 	overflow: auto;
 }
 
-#createNewCollection {
+#moustacheHeader {
 	display:block;
 	position: relative;
-	top: 4px;
-	width: 90%;
-	margin: auto;
-	padding: 2px 2px;
+	/*top: 4px;*/
+    text-align: center;
 
-	border-radius: 2px;
-	border: 1px solid #C0C5CE;
+	width: 100%;
+	margin: auto;
+	padding: 3px 3px;
+    background-color: #c3cdf0;
 }
 
 #cardFeed {
@@ -353,4 +364,47 @@ a:hover {
 	padding-left: 0;
 	line-height: 1.2;
 	color: #65737D;
+}
+
+
+#deckFeedTexts li {
+    /*background-color: red;*/
+	position: relative;
+	z-index: 1;
+	/*display: inline-block;*/
+	/*max-width: 60%;*/
+	/*text-align: right;*/
+    list-style-type: none;
+    padding: 3px;
+    margin: 0;
+	color: #4F5B66;
+	border-radius: 16px;
+	background-color: #ECECEC;
+    border: 2px solid #DFDFDF;
+
+	/*background-color: #575B66;*/
+}
+
+#deckFeedTexts li a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/*me background-color: #EBF1FF;*/
+
+/*there background-color: #ECECEC;*/
+
+#deckFeedTexts {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#deckFeedTexts .timestamp{
+    font-size: 8pt;
+    padding-right: 10px;
+    text-align: right;
+}
+
+#stashPic {
+    width: 50px;
 }
