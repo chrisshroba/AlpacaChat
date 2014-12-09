@@ -76,7 +76,7 @@ socket.on("chat message",function(msg){
                 owner: "1",
                 timestamp: timeStamp(),
                 img: "none",
-                id: msg + ((new Date()).getTime()) + "1"
+                id:  ((new Date()).getTime()) + "1"
             }
         ));
         main.mainFeed.scroll();
