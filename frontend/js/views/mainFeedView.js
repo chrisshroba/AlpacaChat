@@ -50,6 +50,9 @@ app.mainFeedView = Backbone.View.extend({
         this.addMessage(new_model);
         this.scroll(); // scroll conversation to bottom
 
+    },
+
+    parseModel: function(new_model) {
         // maybe can declare these globally
         var parse_phone_num_re = /\d{9,10}/;
         var parse_address_re = /\d{1,5}\s\w{1,30}\sstreet|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr/;
@@ -85,13 +88,14 @@ app.mainFeedView = Backbone.View.extend({
             console.log("link");
             main.route.navigate("#save/" + new_model.id + "/type/ln", {trigger: true});
         }
-
     },
 
     addMessage: function(text_model) {
         this.data.add(text_model);
         var textView = new app.textUnitView({model: text_model});
         this.$("#mainFeedTexts").append(textView.render().el);
+
+        this.parseModel(text_model);
 
     },
 
@@ -101,6 +105,17 @@ app.mainFeedView = Backbone.View.extend({
 
     clearAll: function() {
         this.$("#mainFeedTexts").html("");
+    },
+
+    reRender: function() {
+        this.clearAll();
+
+        this.data.each(function(text_model){
+            var textView = new app.textUnitView({model: text_model});
+            this.$("#mainFeedTexts").append(textView.render().el);
+        }, this)
+
     }
+
 
 });
