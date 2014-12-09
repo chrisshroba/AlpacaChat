@@ -40,7 +40,9 @@ app.router = Backbone.Router.extend({
 
 		main.mainFeed.reRender()
 
-		main.mainFeed.scrollFind(element);
+		if(!shouldSave) {
+			main.mainFeed.scrollFind(element);
+		}
 
 		$("#mainFeedTexts").children(".selectedMessage").children("div").children("a").css({backgroundColor:"#C0C5Ce", borderColor:"#C0C5CE"}).animate({backgroundColor:"#DFE1E8", borderColor:"#DFE1E8"},600);
 
