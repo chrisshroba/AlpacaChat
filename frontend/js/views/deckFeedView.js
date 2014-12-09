@@ -28,18 +28,15 @@ app.deckFeedView = Backbone.View.extend({
         this.renderAll(this.data);
 
         if(isVisible) {
-            console.log("show");
             $(this.el).show();
         }
         else {
-            console.log("hide")
             $(this.el).hide();
         }
 
     },
 
     renderAll: function(textUnits) {
-        console.log(textUnits.toJSON());
         textUnits.each(this.addMessage, this);
     },
 
@@ -48,9 +45,12 @@ app.deckFeedView = Backbone.View.extend({
         this.$("#deckFeedTexts").html("");
     },
 
-    addMessage: function(text_model) {
+    addMessage: function(text_model, withData) {
         //console.log(text_model.toJSON());
         //this.data.add(text_model);
+        if(withData)
+            console.log("test");
+
         var textView = new app.textUnitView({model: text_model});
         this.$("#deckFeedTexts").append(textView.render().el);
         //console.log("appended");

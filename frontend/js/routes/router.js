@@ -41,9 +41,9 @@ app.router = Backbone.Router.extend({
 		main.header.render();
 
 		main.col.data = convo.decks;
-		main.col.clearAll();
+		//main.col.clearAll();
 		// console.log(main.col.data.toJSON());
-		main.col.renderAll(main.col.data);
+		//main.col.renderAll(main.col.data);
 	},
 
 	returnToCollections: function() {
@@ -85,6 +85,9 @@ app.router = Backbone.Router.extend({
 
 		var favoritesDeck = main.col.data.get("Favorites");
 		favoritesDeck.cards.add(foundText);
+
+		main.deckFeed.addMessage(foundText, true);
+
 		//console.log("called");
 		this.navigate("", {trigger: false});
 
