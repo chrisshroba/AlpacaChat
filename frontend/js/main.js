@@ -46,7 +46,7 @@ var testConvo7 = new app.convoUnit({
 
 //Conversations
 main.conversations = new app.convoUnitCollection([
-    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7, testConvo8
+    testConvo1, testConvo2, testConvo3, testConvo4, testConvo5, testConvo6, testConvo7
 ]);
 
 main.convos = new app.convoFeedView(main.conversations);
