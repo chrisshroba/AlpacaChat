@@ -74,7 +74,7 @@ socket.on("chat message",function(msg){
             {
                 body: msg,
                 owner: "1",
-                timestamp: new Date().toLocaleTimeString(),
+                timestamp: timeStamp(),
                 img: "none",
                 id: msg + ((new Date()).getTime()) + "1"
             }
