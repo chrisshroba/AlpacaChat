@@ -46,11 +46,26 @@ app.mainFeedView = Backbone.View.extend({
         });
         this.input.val('');
 
+        
         this.addMessage(new_model);
         this.scroll(); // scroll conversation to bottom
     },
 
     addMessage: function(text_model) {
+        // maybe can declare these globally
+        var parse_phone_num_re = /\d{9,10}/;
+        var parse_address_re = /\d{1,5}\s\w{1,30}\sstreet|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr/;
+        if(text_model.get("body").search(parse_phone_num_re) > -1)
+        {
+            console.log("found a message with phone number in it");
+            // need to click on this message via code here somehow
+        }
+        if(text_model.get("body").search(parse_address_re) > -1)
+        {
+            console.log("found an address");
+            // need to click on this message via code here somehow
+            
+        }
         this.data.add(text_model);
         var textView = new app.textUnitView({model: text_model});
         this.$("#mainFeedTexts").append(textView.render().el);
