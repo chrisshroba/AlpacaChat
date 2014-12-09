@@ -16,7 +16,7 @@ app.deckFeedView = Backbone.View.extend({
     },
 
     setData: function(textUnits) {
-        console.log(textUnits);
+        //console.log(textUnits);
         this.stopListening(this.data);
         this.data = textUnits;
         this.listenTo(this.data, "add", this.reRender);
@@ -24,7 +24,7 @@ app.deckFeedView = Backbone.View.extend({
 
     reRender: function(){
         this.clearAll();
-        console.log(this.data.toJSON());
+        //console.log(this.data.toJSON());
         this.renderAll(this.data);
     },
 
