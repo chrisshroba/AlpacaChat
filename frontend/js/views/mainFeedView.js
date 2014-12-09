@@ -60,31 +60,32 @@ app.mainFeedView = Backbone.View.extend({
         var parse_link_re = /(?:www\.)|(?:http:)|(?:https:)/;
         if(new_model.get("body").search(parse_phone_num_re) > -1)
         {
-            // console.log("found a message with phone number in it");
+            console.log("phone number");
             main.route.navigate("#save/" + new_model.id + "/type/phone", {trigger: true});
             // need to click on this message via code here somehow
         }
-        else if(new_model.get("body").search(parse_address_re) > -1)
+        if(new_model.get("body").search(parse_address_re) > -1)
         {
-            // console.log("found an address");
+            console.log("address");
             main.route.navigate("#save/" + new_model.id + "/type/addr", {trigger: true});
             // need to click on this message via code here somehow
         }
-        else if(new_model.get("body").search(parse_time_re) > -1)
+        if(new_model.get("body").search(parse_time_re) > -1)
         {
             console.log("time");
+            main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
         }
-        else if((new_model.get("body").search(parse_date_re) > -1) || ((text_model.get("body").search(parse_date_re2) > -1)))
+        if((new_model.get("body").search(parse_date_re) > -1) || ((new_model.get("body").search(parse_date_re2) > -1)))
         {
             console.log("date");
+            main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
         }
-        else if(new_model.get("body").search(parse_link_re) > -1)
+        if(new_model.get("body").search(parse_link_re) > -1)
         {
             console.log("link");
+            main.route.navigate("#save/" + new_model.id + "/type/ln", {trigger: true});
         }
 
-
-        }
     },
 
     addMessage: function(text_model) {
