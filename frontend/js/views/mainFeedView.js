@@ -53,19 +53,39 @@ app.mainFeedView = Backbone.View.extend({
         // maybe can declare these globally
         var parse_phone_num_re = /\d{9,10}/;
         var parse_address_re = /\d{1,5}\s\w{1,30}\sstreet|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr/;
+        var parse_time_re = /\d{1,2}:\d{2}/;
+        var parse_date_re = /(?:\d{1,2})(?:\.|-|\/)(?:\d{1,2})(?:\.|-|\/)(?:(?:\d{2})|(?:\d{4}))/;
+        // var parse_date_re = /(?:\d{1,2})(?:\.|-|\\)(?:\d{1,2})(?:\.|-|\\)(?:(?:\d{2})|(?:\d{4}))/;
+        var parse_date_re2 = /(?:jan|Jan|january|January|feb|Feb|february|February|mar|Mar|march|March|apr|Apr|april|April|may|May|jun|Jun|june|June|jul|Jul|july|July|aug|Aug|august|August|sep|sept|Sep|Sept|september|September|oct|Oct|october|October|nov|Nov|november|November|dec|Dec|december|December)\s\d{1,2}/;
+        var parse_link_re = /(?:www\.)|(?:http:)|(?:https:)/;
         if(new_model.get("body").search(parse_phone_num_re) > -1)
         {
-            // console.log("found a message with phone number in it");
+            console.log("phone number");
             main.route.navigate("#save/" + new_model.id + "/type/phone", {trigger: true});
             // need to click on this message via code here somehow
         }
-        else if(new_model.get("body").search(parse_address_re) > -1)
+        if(new_model.get("body").search(parse_address_re) > -1)
         {
-            // console.log("found an address");
+            console.log("address");
             main.route.navigate("#save/" + new_model.id + "/type/addr", {trigger: true});
             // need to click on this message via code here somehow
-
         }
+        if(new_model.get("body").search(parse_time_re) > -1)
+        {
+            console.log("time");
+            main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
+        }
+        if((new_model.get("body").search(parse_date_re) > -1) || ((new_model.get("body").search(parse_date_re2) > -1)))
+        {
+            console.log("date");
+            main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
+        }
+        if(new_model.get("body").search(parse_link_re) > -1)
+        {
+            console.log("link");
+            main.route.navigate("#save/" + new_model.id + "/type/ln", {trigger: true});
+        }
+
     },
 
     addMessage: function(text_model) {

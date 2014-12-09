@@ -63,6 +63,12 @@ app.router = Backbone.Router.extend({
 		else if(type == "addr") {
 			targetDeck = main.col.data.get("Addresses");
 		}
+		else if(type == "td") {
+			targetDeck = main.col.data.get("Dates & Times");
+		}
+		else if(type == "ln") {
+			targetDeck = main.col.data.get("Links");
+		}
 
 		if(shouldSave)
 			targetDeck.cards.add(foundText);
