@@ -41,6 +41,7 @@ app.router = Backbone.Router.extend({
 		main.header.render();
 
 		main.col.data = convo.decks;
+		main.deckFeed.setVisible(false);
 		//main.col.clearAll();
 		// console.log(main.col.data.toJSON());
 		//main.col.renderAll(main.col.data);
@@ -64,7 +65,6 @@ app.router = Backbone.Router.extend({
 			mess.set("selected",true);
 		if(main.mainFeed.data.curSelected != null) {
 			main.mainFeed.data.curSelected.set("selected", false);
-			console.log("selected");
 		}
 
 		main.mainFeed.clearAll();
@@ -86,7 +86,7 @@ app.router = Backbone.Router.extend({
 		var favoritesDeck = main.col.data.get("Favorites");
 		favoritesDeck.cards.add(foundText);
 
-		main.deckFeed.addMessage(foundText, true);
+		//main.deckFeed.addMessage(foundText, true);
 
 		//console.log("called");
 		this.navigate("", {trigger: false});
@@ -106,7 +106,7 @@ app.router = Backbone.Router.extend({
 	openDeck: function(deckId) {
 		var targetDeck = main.col.data.get(deckId);
 
-		main.deckFeed.data = targetDeck.cards;
+		main.deckFeed.setData(targetDeck.cards);
 		main.deckFeed.setVisible(true);
 	},
 
