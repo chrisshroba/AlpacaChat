@@ -65,10 +65,19 @@ border-color: #D9E4FF;
 #textUnitDiv {
 	margin-top: 3px;
 	width: calc(100% - 3em);
-	word-break:break-all;
+	word-wrap:break-word;
 
 	/*text-align: right;*/
 }
+
+#deckFeed #textUnitDiv {
+	margin-top: 3px;
+	width: calc(100% - 1em);
+
+	/*text-align: right;*/
+}
+
+
 
 #mainFeedTexts a {
 	position: relative;
@@ -394,6 +403,8 @@ border-color: #D9E4FF;
 	border-radius: 16px;
 	background-color: #ECECEC;
     border: 2px solid #DFDFDF;
+
+    margin-bottom: 10px;
 
 	/*background-color: #575B66;*/
 }
