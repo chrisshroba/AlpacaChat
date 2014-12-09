@@ -62,13 +62,14 @@ app.mainFeedView = Backbone.View.extend({
         var parse_address_re = /\d{1,5}\s\w{1,30}\sstreet|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr/;
         if(text_model.get("body").search(parse_phone_num_re) > -1)
         {
-            console.log("found a message with phone number in it");
-            main.route.navigate("#as/" + text_model.id, {trigger: true});
+            // console.log("found a message with phone number in it");
+            main.route.navigate("#as/pn/" + text_model.id, {trigger: true});
             // need to click on this message via code here somehow
         }
         if(text_model.get("body").search(parse_address_re) > -1)
         {
-            console.log("found an address");
+            // console.log("found an address");
+            main.route.navigate("#as/a/" + text_model.id, {trigger: true});
             // need to click on this message via code here somehow
             
         }

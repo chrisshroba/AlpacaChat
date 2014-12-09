@@ -8,7 +8,8 @@ app.router = Backbone.Router.extend({
 		"message/:id":"message",
 		"save/:id":"savedMessage",
 		"deck/:id":"openDeck",
-		"as/:id":"autoSave",
+		"as/a/:id":"autoSaveAddress",
+		"as/pn/:id":"autoSavePhoneNumber",
 		"collections" : "returnToCollections"
 
 	},
@@ -24,9 +25,76 @@ app.router = Backbone.Router.extend({
 
 	},
 
-	autoSave: function(elementId) {
-		console.log("TEST FOUND AUTOSAVE LOOK HERE AUSTIN");
-		console.log(elementId);
+	autoSaveAddress: function(elementId) {
+		// console.log("TEST FOUND AUTOSAVE LOOK HERE AUSTIN");
+		// console.log(elementId);
+		var mess = main.mainFeed.data.get(elementId);
+		// mess.set("selected",true);
+		mess.set("saved",true);
+
+		// if(main.mainFeed.data.curSelected != null) {
+		// 	main.mainFeed.data.curSelected.set("selected", false);
+		// }
+
+		// main.mainFeed.clearAll();
+		// main.mainFeed.renderAll(main.mainFeed.data);
+
+
+		// main.mainFeed.scrollFind(elementId);
+
+		$("#mainFeedTexts").children(".selectedMessage").children("div").children("a").css({backgroundColor:"#C0C5Ce", borderColor:"#C0C5CE"}).animate({backgroundColor:"#DFE1E8", borderColor:"#DFE1E8"},600);
+
+		// main.mainFeed.data.curSelected = mess;
+
+		var foundText = main.mainFeed.data.get(elementId);
+		if(foundText == undefined) {
+			//console.log("early return");
+			return;
+		}
+
+		var favoritesDeck = main.col.data.get("Addresses");
+		favoritesDeck.cards.add(foundText);
+
+		//main.deckFeed.addMessage(foundText, true);
+
+		//console.log("called");
+		this.navigate("", {trigger: false});
+	},
+
+	autoSavePhoneNumber: function(elementId) {
+		// console.log("TEST FOUND AUTOSAVE LOOK HERE AUSTIN");
+		// console.log(elementId);
+		var mess = main.mainFeed.data.get(elementId);
+		// mess.set("selected",true);
+		mess.set("saved",true);
+
+		// if(main.mainFeed.data.curSelected != null) {
+		// 	main.mainFeed.data.curSelected.set("selected", false);
+		// }
+
+		// main.mainFeed.clearAll();
+		// main.mainFeed.renderAll(main.mainFeed.data);
+
+
+		// main.mainFeed.scrollFind(elementId);
+
+		$("#mainFeedTexts").children(".selectedMessage").children("div").children("a").css({backgroundColor:"#C0C5Ce", borderColor:"#C0C5CE"}).animate({backgroundColor:"#DFE1E8", borderColor:"#DFE1E8"},600);
+
+		// main.mainFeed.data.curSelected = mess;
+
+		var foundText = main.mainFeed.data.get(elementId);
+		if(foundText == undefined) {
+			//console.log("early return");
+			return;
+		}
+
+		var favoritesDeck = main.col.data.get("Phone Numbers");
+		favoritesDeck.cards.add(foundText);
+
+		//main.deckFeed.addMessage(foundText, true);
+
+		//console.log("called");
+		this.navigate("", {trigger: false});
 	},
 
 	message: function(id) {
