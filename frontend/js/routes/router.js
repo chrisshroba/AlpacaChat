@@ -7,7 +7,8 @@ app.router = Backbone.Router.extend({
 		"":"noRoute",
 		"message/:id":"message",
 		"save/:id":"savedMessage",
-		"deck/:id":"openDeck"
+		"deck/:id":"openDeck",
+		"as/:id":"autoSave"
 
 	},
 
@@ -20,6 +21,11 @@ app.router = Backbone.Router.extend({
 		this.navigate("message/" + targetThread.id, {trigger: true});
 		//this.message(targetThread.id);
 
+	},
+
+	autoSave: function(elementId) {
+		console.log("TEST FOUND AUTOSAVE LOOK HERE AUSTIN");
+		console.log(elementId);
 	},
 
 	message: function(id) {
