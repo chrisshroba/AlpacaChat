@@ -46,6 +46,16 @@
         <input id="createNewCollection" type="text" placeholder="New Collection...">
     </div>
 
+    <!-- individual deck view -->
+    <div id="deckFeed">
+        <div id="backDiv">
+            <a id="back" href="#collections">Back</a>
+        </div>
+        <div id="decksDiv">
+            <ul id="deckFeedTexts"></ul>
+        </div>
+    </div>
+
     <!-- card view -->
     <div id="cardFeed">
         <div id="cardDiv">
@@ -73,12 +83,10 @@
     <script id="deckTemplate" type="text/template">
             <div class="deck">
                 <a href="#deck/<%= id %>">
-
                     <%= name %>
                 </a>
 
                 <ul id="collectionTexts">
-
                 </ul>
 
             </div>
@@ -117,6 +125,7 @@
     <script src="frontend/js/collections/deckCollection.js"></script>
     <script src="frontend/js/views/colFeedView.js"></script>
     <script src="frontend/js/views/mainHeaderView.js"></script>
+    <script src="frontend/js/views/deckFeedView.js"></script>
     <script src="frontend/js/main.js"></script>
 
 </html>

@@ -57,12 +57,15 @@ main.convos = new app.convoFeedView(main.conversations);
 /* collections */
 main.col = new app.colFeedView();
 
+main.deckFeed = new app.deckFeedView(new app.textUnitCollection(), false);
+
 
 /* router */
 main.route = new app.router();
 
 
 main.header = new app.mainHeaderView();
+
 
 
 /* Setup socket.io stuff */
