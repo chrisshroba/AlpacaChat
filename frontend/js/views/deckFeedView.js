@@ -19,11 +19,12 @@ app.deckFeedView = Backbone.View.extend({
         console.log(textUnits);
         this.stopListening(this.data);
         this.data = textUnits;
-        this.listenTo(this.data, "change", this.reRender);
+        this.listenTo(this.data, "add", this.reRender);
     },
 
     reRender: function(){
         this.clearAll();
+        console.log(this.data.toJSON());
         this.renderAll(this.data);
     },
 
@@ -54,8 +55,8 @@ app.deckFeedView = Backbone.View.extend({
 
     addMessage: function(text_model, withData) {
         //console.log(text_model.toJSON());
-        if(withData)
-            this.data.add(text_model);
+        //if(withData)
+        //    this.data.add(text_model);
 
         var textView = new app.textUnitView({model: text_model});
         this.$("#deckFeedTexts").append(textView.render().el);
