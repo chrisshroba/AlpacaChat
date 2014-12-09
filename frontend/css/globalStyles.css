@@ -44,10 +44,18 @@ a:hover {
 	background-color: #A7ADB9;
 }
 
+.myMessage {
+	text-align: right;
+}
+
+.theirMessage {
+	text-align: left;
+}
+
 #textUnitDiv {
 	margin-top: 3px;
 	width: calc(100% - 3em);
-	text-align: right;
+	/*text-align: right;*/
 }
 
 #mainFeedTexts a {
