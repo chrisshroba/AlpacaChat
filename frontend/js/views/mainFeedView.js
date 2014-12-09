@@ -49,13 +49,6 @@ app.mainFeedView = Backbone.View.extend({
         
         this.addMessage(new_model);
         this.scroll(); // scroll conversation to bottom
-    },
-
-    addMessage: function(text_model) {
-        this.data.add(text_model);
-        var textView = new app.textUnitView({model: text_model});
-        this.$("#mainFeedTexts").append(textView.render().el);
-
 
         // maybe can declare these globally
         var parse_phone_num_re = /\d{9,10}/;
@@ -65,31 +58,39 @@ app.mainFeedView = Backbone.View.extend({
         // var parse_date_re = /(?:\d{1,2})(?:\.|-|\\)(?:\d{1,2})(?:\.|-|\\)(?:(?:\d{2})|(?:\d{4}))/;
         var parse_date_re2 = /(?:jan|Jan|january|January|feb|Feb|february|February|mar|Mar|march|March|apr|Apr|april|April|may|May|jun|Jun|june|June|jul|Jul|july|July|aug|Aug|august|August|sep|sept|Sep|Sept|september|September|oct|Oct|october|October|nov|Nov|november|November|dec|Dec|december|December)\s\d{1,2}/;
         var parse_link_re = /(?:www\.)|(?:http:)|(?:https:)/;
-        if(text_model.get("body").search(parse_phone_num_re) > -1)
+        if(new_model.get("body").search(parse_phone_num_re) > -1)
         {
             // console.log("found a message with phone number in it");
-            main.route.navigate("#as/pn/" + text_model.id, {trigger: true});
+            main.route.navigate("#save/" + new_model.id + "/type/phone", {trigger: true});
             // need to click on this message via code here somehow
         }
-        if(text_model.get("body").search(parse_address_re) > -1)
+        else if(new_model.get("body").search(parse_address_re) > -1)
         {
             // console.log("found an address");
-            main.route.navigate("#as/a/" + text_model.id, {trigger: true});
+            main.route.navigate("#save/" + new_model.id + "/type/addr", {trigger: true});
             // need to click on this message via code here somehow
         }
-        if(text_model.get("body").search(parse_time_re) > -1)
+        else if(new_model.get("body").search(parse_time_re) > -1)
         {
             console.log("time");
         }
-        if((text_model.get("body").search(parse_date_re) > -1) || ((text_model.get("body").search(parse_date_re2) > -1)))
+        else if((new_model.get("body").search(parse_date_re) > -1) || ((text_model.get("body").search(parse_date_re2) > -1)))
         {
             console.log("date");
         }
-        if(text_model.get("body").search(parse_link_re) > -1)
+        else if(new_model.get("body").search(parse_link_re) > -1)
         {
             console.log("link");
         }
 
+
+        }
+    },
+
+    addMessage: function(text_model) {
+        this.data.add(text_model);
+        var textView = new app.textUnitView({model: text_model});
+        this.$("#mainFeedTexts").append(textView.render().el);
 
     },
 
