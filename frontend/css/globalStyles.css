@@ -44,10 +44,18 @@ a:hover {
 	background-color: #A7ADB9;
 }
 
+.myMessage {
+	text-align: right;
+}
+
+.theirMessage {
+	text-align: left;
+}
+
 #textUnitDiv {
 	margin-top: 3px;
 	width: calc(100% - 3em);
-	text-align: right;
+	/*text-align: right;*/
 }
 
 #mainFeedTexts a {
@@ -61,6 +69,17 @@ a:hover {
 	color: #4F5B66;
 	border: 2px solid #DFE1E8;
 	border-radius: 16px;
+	background-color: #DFE1E8;
+}
+
+#deckFeed {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	height: 100%;
+	width: 10em;
+	z-index: 4;
 	background-color: #DFE1E8;
 }
 

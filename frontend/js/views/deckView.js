@@ -9,7 +9,7 @@ app.deckView = Backbone.View.extend({
 
     initialize: function() {
         //console.log("initialize deckView");
-        this.listenTo(this.model.cards, 'add', this.renderList);
+        //this.listenTo(this.model.cards, 'add', this.renderList);
     },
 
     render: function(){

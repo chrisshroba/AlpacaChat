@@ -7,7 +7,8 @@ app.router = Backbone.Router.extend({
 		"":"noRoute",
 		"message/:id":"message",
 		"save/:id":"savedMessage",
-		"deck/:id":"openDeck"
+		"deck/:id":"openDeck",
+		"collections" : "returnToCollections"
 
 	},
 
@@ -40,9 +41,14 @@ app.router = Backbone.Router.extend({
 		main.header.render();
 
 		main.col.data = convo.decks;
-		main.col.clearAll();
+		main.deckFeed.setVisible(false);
+		//main.col.clearAll();
 		// console.log(main.col.data.toJSON());
-		main.col.renderAll(main.col.data);
+		//main.col.renderAll(main.col.data);
+	},
+
+	returnToCollections: function() {
+		main.deckFeed.setVisible(false);
 	},
 
 	savedMessage: function(element) {
@@ -55,10 +61,10 @@ app.router = Backbone.Router.extend({
 
 		//click scroll
 		var mess = main.mainFeed.data.get(element);
-		mess.set("selected",true);
+		if(mess)
+			mess.set("selected",true);
 		if(main.mainFeed.data.curSelected != null) {
 			main.mainFeed.data.curSelected.set("selected", false);
-			console.log("selected");
 		}
 
 		main.mainFeed.clearAll();
@@ -80,6 +86,12 @@ app.router = Backbone.Router.extend({
 		var favoritesDeck = main.col.data.get("Favorites");
 		favoritesDeck.cards.add(foundText);
 
+		//main.deckFeed.addMessage(foundText, true);
+
+		//console.log("called");
+		this.navigate("", {trigger: false});
+
+
 		// mess.set("selected",false);
 		// if(main.mainFeed.data.curSelected != null) {
 		// 	main.mainFeed.data.curSelected.set("selected", false);
@@ -93,8 +105,9 @@ app.router = Backbone.Router.extend({
 
 	openDeck: function(deckId) {
 		var targetDeck = main.col.data.get(deckId);
-		//console.log(targetDeck.cards.toJSON());
 
+		main.deckFeed.setData(targetDeck.cards);
+		main.deckFeed.setVisible(true);
 	},
 
 	deckAdded: function(deck) {
