@@ -71,14 +71,17 @@
     </script>
 
     <script id="deckTemplate" type="text/template">
-        <a href="#deck/<%= id %>">
             <div class="deck">
-                <%= name %>
+                <a href="#deck/<%= id %>">
+
+                    <%= name %>
+                </a>
+
                 <ul id="collectionTexts">
 
                 </ul>
+
             </div>
-        </a>
     </script>
 
     <script id="convoUnitView" type="text/template">
