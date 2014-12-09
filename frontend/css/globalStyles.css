@@ -196,7 +196,7 @@ border-color: #D9E4FF;
 
 #deckFeed .selectedMessage {
 	background-color: #DFE1E8;
-
+    color: #4F5B66;
 }
 
 
@@ -405,9 +405,10 @@ border-color: #D9E4FF;
     list-style-type: none;
     padding: 3px;
     margin: 0;
-	color: #4F5B66;
+	color: #FAFCFF;
+
 	border-radius: 16px;
-	background-color: #ECECEC;
+	background-color: #575B66;
     border: 2px solid #DFDFDF;
 
     margin-bottom: 10px;
