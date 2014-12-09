@@ -99,7 +99,7 @@ border-color: #D9E4FF;
 	top: 0;
 
 	height: 100%;
-	width: 10em;
+	width: 15em;
 	z-index: 4;
     background-color: #D9E5FF;
 }
@@ -183,7 +183,7 @@ border-color: #D9E4FF;
 	left: 10em;
 	bottom: 25px;
 	height: calc(100% - 2em);
-	width: calc(100% - 20em);
+	width: calc(100% - 25em);
 	/*min-width: 30em;*/
 
 	background-color: #FAFCFF;
@@ -193,6 +193,12 @@ border-color: #D9E4FF;
 	height: calc(100% - 6.2em);
 	overflow: auto;
 }
+
+#deckFeed .selectedMessage {
+	background-color: #DFE1E8;
+
+}
+
 
 #mainFeedInput {
 	display: inline-block;
@@ -275,7 +281,7 @@ border-color: #D9E4FF;
 	top: 0;
 
 	height: 100%;
-	width: 10em;
+	width: 15em;
 	z-index: 3;
 	background-color: #DFE1E8;
 }
@@ -345,7 +351,7 @@ border-color: #D9E4FF;
 	top: 0;
 
 	height: 100%;
-	width: 10em;
+	width: 15em;
 	z-index: 3;
 	background-color: #DFE1E8;
 }
@@ -421,6 +427,7 @@ border-color: #D9E4FF;
 #deckFeedTexts {
     padding-left: 10px;
     padding-right: 10px;
+
 }
 
 #deckFeedTexts .timestamp{
@@ -431,4 +438,9 @@ border-color: #D9E4FF;
 
 #stashPic {
     width: 70px;
+}
+
+#decksDiv {
+    overflow-y: auto;
+    height: calc(100% - 2.5em);
 }
