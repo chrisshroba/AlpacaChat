@@ -56,6 +56,7 @@ app.router = Backbone.Router.extend({
 		//click scroll
 		var mess = main.mainFeed.data.get(element);
 		mess.set("selected",true);
+		mess.set("saved",true);
 		if(main.mainFeed.data.curSelected != null) {
 			main.mainFeed.data.curSelected.set("selected", false);
 			console.log("selected");
