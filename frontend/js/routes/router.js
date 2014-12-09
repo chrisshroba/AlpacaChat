@@ -38,9 +38,7 @@ app.router = Backbone.Router.extend({
 			main.mainFeed.data.curSelected.set("selected", false);
 		}
 
-		main.mainFeed.clearAll();
-		main.mainFeed.renderAll(main.mainFeed.data);
-
+		main.mainFeed.reRender()
 
 		main.mainFeed.scrollFind(element);
 
