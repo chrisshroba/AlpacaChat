@@ -21,7 +21,7 @@ var testConvo2 = new app.convoUnit({
     title: "Blade Chapman",
     id: generate_id()
 });
-var testConvo7 = new app.convoUnit({
+var testConvo3 = new app.convoUnit({
     title: "Brendan Moriarty",
     id: generate_id()
 });
@@ -29,15 +29,15 @@ var testConvo4 = new app.convoUnit({
     title: "Chris Shroba",
     id: generate_id()
 });
-var testConvo3 = new app.convoUnit({
+var testConvo5 = new app.convoUnit({
     title: "Claire Sheong",
     id: generate_id()
 });
-var testConvo5 = new app.convoUnit({
+var testConvo6 = new app.convoUnit({
     title: "Marie Lin",
     id: generate_id()
 });
-var testConvo6 = new app.convoUnit({
+var testConvo7 = new app.convoUnit({
     title: "Niki Wells",
     id: generate_id()
 });
