@@ -26,11 +26,13 @@ app.router = Backbone.Router.extend({
 	},
 
 	savedMessage: function(element, type) {
-		console.log("type: " + type);
-		//click scroll
+
 		var mess = main.mainFeed.data.get(element);
+		var shouldSave = !mess.get("saved");
+
 		mess.set("selected",true);
-		mess.set("saved",true);
+		if(type == "fav")
+			mess.set("saved",true);
 
 		if(main.mainFeed.data.curSelected != null) {
 			main.mainFeed.data.curSelected.set("selected", false);
@@ -61,7 +63,9 @@ app.router = Backbone.Router.extend({
 		else if(type == "addr") {
 			targetDeck = main.col.data.get("Addresses");
 		}
-		targetDeck.cards.add(foundText);
+
+		if(shouldSave)
+			targetDeck.cards.add(foundText);
 
 
 
