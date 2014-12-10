@@ -54,12 +54,13 @@ app.mainFeedView = Backbone.View.extend({
 
     parseModel: function(new_model) {
         // maybe can declare these globally
-        var parse_phone_num_re = /\d{9,10}/;
-        var parse_address_re = /\d{1,5}\s\w{1,30}\sstreet|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr/;
+        var parse_phone_num_re = /(?:\d{10})|(?:1\d{10})|(?:\d{3}-\d{3}-\d{4})|(?:1-\d{3}-\d{3}-\d{4})|(?:\d{3}\u0020\d{3}\u0020\d{4})|(?:1\u0020\d{3}\u0020\d{3}\u0020\d{4})/;
+        var parse_address_re = /\d{1,5}\u0020\w{1,30}\u0020(?:street|Street|St|st|road|Road|Rd|rd|avenue|Avenue|Ave|ave|trail|Trail|Tr|tr)/;
         var parse_time_re = /\d{1,2}:\d{2}/;
         var parse_date_re = /(?:\d{1,2})(?:\.|-|\/)(?:\d{1,2})(?:\.|-|\/)(?:(?:\d{2})|(?:\d{4}))/;
         // var parse_date_re = /(?:\d{1,2})(?:\.|-|\\)(?:\d{1,2})(?:\.|-|\\)(?:(?:\d{2})|(?:\d{4}))/;
-        var parse_date_re2 = /(?:jan|Jan|january|January|feb|Feb|february|February|mar|Mar|march|March|apr|Apr|april|April|may|May|jun|Jun|june|June|jul|Jul|july|July|aug|Aug|august|August|sep|sept|Sep|Sept|september|September|oct|Oct|october|October|nov|Nov|november|November|dec|Dec|december|December)\s\d{1,2}/;
+        var parse_date_re2 = /(?:jan|Jan|january|January|feb|Feb|february|February|mar|Mar|march|March|apr|Apr|april|April|may|May|jun|Jun|june|June|jul|Jul|july|July|aug|Aug|august|August|sep|sept|Sep|Sept|september|September|oct|Oct|october|October|nov|Nov|november|November|dec|Dec|december|December)\u0020\d{1,2}/;
+        var parse_date_re3 = /(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|monday|tuesday|wednesday|thursday|friday|saturday|sunday)/;
         var parse_link_re = /(?:www\.)|(?:http:)|(?:https:)/;
         if(new_model.get("body").search(parse_phone_num_re) > -1)
         {
@@ -78,7 +79,7 @@ app.mainFeedView = Backbone.View.extend({
             console.log("time");
             main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
         }
-        if((new_model.get("body").search(parse_date_re) > -1) || ((new_model.get("body").search(parse_date_re2) > -1)))
+        if((new_model.get("body").search(parse_date_re) > -1) || ((new_model.get("body").search(parse_date_re2) > -1)) || ((new_model.get("body").search(parse_date_re3) > -1)))
         {
             console.log("date");
             main.route.navigate("#save/" + new_model.id + "/type/td", {trigger: true});
